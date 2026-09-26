@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="La evolución de Roblox a través de los años.">
+        <meta name="keywords" content="Roblox, evolución, cambios">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evolución de Roblox</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-color: rgb(225, 239, 252);
+                background-position: center 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+
+            h1, h2{
+                font-weight: bold;
+                font-size: 30px;
+                padding: 0 10px;
+                margin: 15px 0;
+                font-family: 'Baloo 2', sans-serif;
+                color: #333;
+            }
+
+            .imagen_rblx{
+                padding: 0 0 0 10px;
+            }
+
+            div.intro_evolucion {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin-top: 10px;
+                margin-bottom: 14px;
+            }
+
+            p{
+                padding: 0 10px;
+                color: #222;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 95%;
+                border-radius: 10px;
+                overflow: hidden;
+                border: none;
+            }
+
+            th{
+                background-color: #3661FF;
+                color: white;
+            }
+
+            th, td{
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            tr:nth-child(even){
+                background-color: #e8edff;
+            }
+
+            .tabla_evo{
+                display: flex;
+                justify-content: center;
+                width: 85%;
+                min-height: 600px;
+                min-width: 400px;
+
+            }
+            div.tabla_evo table tr td:first-child a{
+                text-decoration: none;
+            }
+
+            div.tabla_evo table tr td:first-child a:visited{
+                color: black;
+            }
+
+            div.intro_evolucion div:last-child{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            } 
+
+            div.intro_evolucion div:last-child div{
+                display: flex;
+                align-items: center;
+            }
+
+            div.intro_evolucion div:last-child p{
+                padding: 0 15px 0 5px;
+            }
+
+            div table tr td:first-child{
+                text-align: center;
+                font-weight: bold;
+            }
+
+            div.cont_titulos{
+                display: flex;
+                justify-content: center;
+            }
+
+            div.cont_titulo_prin{
+                display: flex;
+                justify-content: center;
+            }
+
+            h1.titulo_principal{
+                color: white;
+                background-color: #2c53e0;
+                width: 97%;
+                text-align: center;
+            }
+
+            h2.segundo_titulo{
+                color: white;
+                background-color: #2c53e0;
+                width: 99%;
+                text-align: center;
+                margin: 0 10px;
+            }
+
+            main article h2{
+                display: flex;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="intro_evolucion">
+                <div class="tabla_evo">
+                    <table>
+                        <tr>
+                            <th>Etapa</th>
+                            <th>Título</th>
+                        </tr>
+                            <tr>
+                                <td><a href="#0406">2004-2006</a></td>
+                                <td>Un <i>proyecto</i> que lo inició todo</td>
+                            </tr>
+                        <tr>
+                            <td><a href="#0612">2006-2012</a></td>
+                            <td>La <i>plataforma</i> pequeña de juegos creados por usuarios</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#1316">2013-2016</a></td>
+                            <td>Avance progresivo a <i>plataforma multiplataforma</i></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#1619">2016-2019</a></td>
+                            <td>Grandes juegos y el <i>nacimiento</i> de una <i>economía</i></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#2021">2020-2021</a></td>
+                            <td>Creciente plataforma social y de entretenimiento</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#2223">2022-2023</a></td>
+                            <td>Ecosistema para juegos, creación, comunicación y educación</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#2426">2024-2026</a></td>
+                            <td>Plataforma global de experiencias, comunidades y economía digital</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <div class="cont_titulo_prin">
+                        <h1 class="titulo_principal">La evolución de Roblox</h1>
+                    </div>
+                    <p>Desde su creación, Roblox ha experimentado una gran transformación, pasando de ser un proyecto enfocado en la construcción y simulación a convertirse en una plataforma global de entretenimiento y creación de contenido. A lo largo de los años, su tecnología, sus herramientas de desarrollo, sus juegos, su economía y su comunidad fueron evolucionando constantemente. 
+                    <br>
+                    En esta sección se recorrerán las principales etapas de esta evolución, destacando los cambios más importantes que marcaron el crecimiento de Roblox desde sus inicios hasta la actualidad.
+                    <br>
+                    En la siguiente tabla se presentan algunas de las principales etapas de esta evolución, organizadas por períodos y acompañadas de los acontecimientos y temas más relevantes de cada época.
+                    </p>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UvE6dCJ5VlU?si=uuUqCmwl0CSbw2tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <article>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="0406">Los comienzos: 2004 - 2006</h2>
+                </div>
+                <p>Roblox comenzó a desarrollarse en 2004, creado por David Baszucki y Erik Cassel. Originalmente el proyecto se llamaba DynaBlocks.
+                La idea inicial era bastante diferente de lo que hoy conocemos como Roblox: Baszucki y Cassel querían crear una plataforma en la que las personas pudieran experimentar con la física, construir objetos y aprender mediante la interacción.
+                En 2005, el nombre pasó a ser Roblox, combinando las ideas de robots y blocks. Finalmente, la plataforma fue lanzada oficialmente en 2006.
+                Desde el principio había una característica que terminaría siendo fundamental: los usuarios no solamente podían jugar, sino también crear sus propias experiencias.</p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="0612">Los primeros años: 2006-2012</h2>
+                </div>
+                <p>Durante sus primeros años, Roblox todavía era una plataforma relativamente pequeña.
+                Los juegos tenían un aspecto mucho más sencillo que los actuales. Los gráficos estaban basados principalmente en bloques y las herramientas de creación eran bastante limitadas comparadas con Roblox Studio actual.
+                Sin embargo, comenzó a desarrollarse una comunidad de jugadores y creadores.
+                <br>
+                Una de las grandes diferencias respecto a un videojuego tradicional era justamente este modelo:
+                Roblox no tenía que crear todos los juegos. Los propios usuarios podían crearlos.
+                Esto permitió que aparecieran experiencias de diferentes tipos: juegos de construcción, aventuras, carreras, simuladores, minijuegos, etc.
+                También comenzó a desarrollarse la economía basada en Robux, la moneda virtual de Roblox, que permitió comprar objetos para los avatares y posteriormente adquirir elementos dentro de las experiencias.</p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="1316">Roblox se convierte en una plataforma: 2013–2016</h2>
+                </div>
+                <p>Durante estos años Roblox empezó a expandirse considerablemente.
+                Un cambio importante fue la llegada a dispositivos móviles, lo que permitió que los usuarios pudieran acceder a Roblox desde teléfonos y tablets.
+                Esto fue fundamental porque Roblox dejó de depender principalmente de la computadora.
+                <br>
+                También comenzó a expandirse hacia otras plataformas, aumentando progresivamente la cantidad de personas que podían acceder a las experiencias.
+                Al mismo tiempo, los desarrolladores fueron adquiriendo herramientas cada vez más sofisticadas para crear sus juegos.
+                Esto provocó que Roblox comenzara a dejar de parecer simplemente un juego de bloques y empezara a funcionar más como un motor/plataforma de creación de videojuegos.</p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="1619">El crecimiento de los juegos y los desarrolladores: 2016–2019</h2>
+                </div>
+                <p> 
+                Esta etapa fue muy importante para Roblox.
+                La cantidad y variedad de experiencias creadas por la comunidad creció enormemente. Algunos juegos comenzaron a convertirse en auténticos fenómenos dentro de la plataforma. 
+                </p>
+                <p><u>Por ejemplo:</u></p>
+                <ul>
+                    <li>Jailbreak</li>
+                    <li>Adopt Me!</li>
+                    <li>MeepCity</li>
+                    <li>Work at a Pizza Place</li>
+                    <li>Murder Mystery 2</li>
+                    <li>Natural Disaster Survival</li>
+                </ul>
+                <p> 
+                    La plataforma empezó a desarrollar algo parecido a una industria propia.
+                    Los desarrolladores podían crear una experiencia, atraer jugadores y obtener Robux mediante compras dentro del juego. Posteriormente esos ingresos podían convertirse en dinero real mediante los sistemas de Roblox para creadores.
+                    Por lo tanto, Roblox ya no era simplemente:
+                    “una página donde juegas juegos creados por usuarios”
+                    sino que se estaba convirtiendo en:
+                    “una plataforma donde los usuarios pueden crear, publicar y monetizar sus propios juegos”.
+                </p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo">La revolución móvil y tecnológica: 2019–2020</h2>
+                </div>
+                <p>
+                Roblox continuó mejorando sus herramientas y su tecnología.
+                Los avatares comenzaron a tener más posibilidades de personalización y la plataforma mejoró progresivamente sus gráficos, iluminación, físicas y herramientas de creación.
+                Por ejemplo, Roblox presentó mejoras importantes en su tecnología gráfica como Future is Bright, Dynamic Skies y las texturas PBR, que permitieron experiencias visualmente mucho más avanzadas.
+                También se mejoraron elementos como el editor de avatares y la tienda de objetos, especialmente en dispositivos móviles.</p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="2021">El gran salto: 2020–2021</h2>
+                </div>
+                <p>
+                Esta probablemente sea una de las etapas más importantes para explicar en tu página.
+                Durante la pandemia de COVID-19, muchas personas pasaron mucho más tiempo utilizando Internet y videojuegos.
+                Roblox experimentó un crecimiento enorme.
+                Pero lo interesante es que la plataforma comenzó a utilizarse no solamente para jugar.</p>
+                <p><u>Los usuarios podían:</u></p>
+                <ul>
+                    <li>Jugar.</li>
+                    <li>Hablar con amigos.</li>
+                    <li>Asistir a eventos.</li>
+                    <li>Crear experiencias.</li>
+                    <li>Personalizar sus avatares.</li>
+                    <li>Participar en conciertos.</li>
+                    <li>Crear comunidades/grupos.</li>
+                </ul>
+                <p>
+                Roblox empezó a acercarse cada vez más a la idea de un espacio social virtual.
+                En 2021 Roblox informó que tenía más de 43 millones de usuarios activos diarios en 180 países.
+                Además, comenzaron a aparecer experiencias relacionadas con artistas y eventos virtuales. Por ejemplo, Roblox realizó experiencias musicales con artistas como Twenty One Pilots.
+                Ese mismo año Roblox comenzó a trabajar en tecnologías como Layered Clothing, cabezas dinámicas y comunicación mediante voz, buscando que los avatares fueran mucho más expresivos. A partir de aproximadamente 2021, se vuelve especialmente interesante hablar de Roblox como plataforma.
+                La diferencia es importante.<br>
+                <u>Un videojuego tradicional normalmente tiene:</u><br>
+                Empresa → crea el juego → jugadores juegan<br>
+                <u>Mientras que Roblox funciona más parecido a:</u><br>
+                Roblox → proporciona las herramientas y plataforma → usuarios crean experiencias → otros usuarios las juegan<br>
+                Y alrededor de esto se creó toda una economía.
+                En 2021 Roblox decía que alrededor de 1,3 millones de desarrolladores y creadores estaban obteniendo Robux, y que los creadores estaban encaminados a generar cientos de millones de dólares mediante la plataforma.
+                Además, Roblox salió a bolsa en la Bolsa de Nueva York en 2021, convirtiéndose en una empresa pública.</p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="2223">2022–2023: más que videojuegos</h2>
+                </div>
+                <p>
+                    <u>Se desarrollaron tecnologías relacionadas con:</u><br>
+                    <ul>
+                        <li>Inteligencia artificial y machine learning</li>
+                        <li>Físicas</li>
+                        <li>Gráficos</li>
+                        <li>Audios</li>
+                        <li>Infraestructura</li>
+                        <li>Economía virtual</li>
+                        <li>Herramientas para desarrolladores</li>
+                    </ul>
+                </p>
+                <p>
+                Roblox incluso comenzó a utilizarse en contextos educativos, aprovechando la posibilidad de crear experiencias interactivas.
+                Y la comunidad también comenzó a cambiar.
+                En 2023, Roblox informó que más del 55 % de sus usuarios tenía más de 13 años, mientras que el grupo de 17 a 24 años era uno de los segmentos de mayor crecimiento.
+                Esto es importante porque muestra que Roblox fue dejando de ser percibido únicamente como una plataforma para niños.
+                </p>
+                <div class="cont_titulos">
+                    <h2 class="segundo_titulo" id="2426">2024–2026: una plataforma global de experiencias</h2>
+                </div>
+                <p>En los años más recientes, Roblox ha seguido creciendo tanto técnicamente como socialmente.
+                La plataforma ahora funciona en múltiples dispositivos, incluyendo PC, teléfonos, consolas y realidad virtual, y alberga millones de experiencias creadas por usuarios.
+                Por ejemplo, en 2024 Roblox realizó The Hunt: First Edition, un evento que reunió a unos 34 millones de usuarios, quienes completaron más de 200 millones de misiones dentro de diferentes experiencias.
+                En 2025, otro evento oficial, The Hunt: Mega Edition, reunió a decenas de millones de jugadores y ofreció un premio de US$1 millón. Roblox informó además que sus eventos de plataforma habían recibido unos 500 millones de visitas durante 2024.
+                Y la escala tecnológica actual es enorme: Roblox informó en 2023 que su infraestructura soportaba más de 70 millones de usuarios activos diarios y más de cinco millones de experiencias únicas creadas por la comunidad en el período descrito en sus informes de transparencia.</p>
+            </article>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

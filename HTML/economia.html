@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="La economía de roblox a través de los años">
+        <meta name="keywords" content="Roblox, economía, robux">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Economía</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://wallpapercave.com/wp/wp4585090.png");
+                background-position: center 10%;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+            }
+
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+
+            main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 0;
+            }
+
+            .tarjetas {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin: 20px 10px;
+            }
+
+            .tarjeta {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                padding: 20px;
+                width: 220px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .tarjeta h2{
+                font-size: 30px;
+            }
+
+            .boton{
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                background-color: #2c53e0;
+                color: white;
+                min-width: 150px;
+                min-height: 50px;
+                cursor: pointer;
+            }
+
+            main article{
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                background-color: rgb(165, 194, 255);
+                width: 69%;
+                border-radius: 20px;
+                border: 3px solid rgb(84, 138, 255);
+                min-height: 500px;
+            }
+
+            main article img{
+                min-width: 310px;
+                min-height: 310px;
+                padding: 10px;
+                margin-left: 10px;
+            }
+
+            main article div p{
+                padding: 0;
+            }
+
+            main article div {
+                border-left: 2px solid lightgrey;
+                padding: 15px;
+            }
+
+            h1.titulo_principal{
+                color: white;
+                background-color: #2c53e0;
+                min-width: 1600px;
+                text-align: center;
+            }
+
+            h2.segundo_titulo{
+                color: white;
+                background-color: #2c53e0;
+                min-width: 1600px;
+                text-align: center;
+            }
+
+            h1, h2, h3{
+                font-weight: bold;
+                font-size: 40px;
+                font-family: 'Baloo 2', sans-serif;
+            }
+            
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            p{
+                padding: 0 10px;
+                color: #333;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1 class="titulo_principal">¿Como ROBLOX genera dinero?</h1>
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <img src="../Images/robux-removebg-preview.png" alt="Icono de Robux" width="80" height="80">
+                    <h2>Robux</h2>
+                    <p>La moneda virtual de Roblox. Se compra en paquetes (por ejemplo, 400, 800, 1.700 o 4.500 Robux) y se usa para comprar accesorios, pases de juego y objetos de la Avatar Shop.</p>
+                    <a href="https://www.roblox.com/upgrades/robux?ctx=navpopover" target="_blank"><button class="boton">Haga click</button></a>
+                </div>
+                <div class="tarjeta">
+                    <img src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/7/9/d/79dcf70933fea34b26484a89274ebcf2dc5f7e76.png" alt="Icono de Roblox Premium" width="80" height="80">
+                    <h2>Roblox Premium</h2>
+                    <p>Una suscripción mensual que otorga una entrega periódica de Robux, un porcentaje extra al vender objetos y acceso al mercado de reventa entre usuarios.</p>
+                    <a href="https://www.roblox.com/upgrades/robux?ctx=navpopover" target="_blank"><button class="boton">Haga click</button></a>
+                </div>
+                <div class="tarjeta">
+                    <img src="../Images/artworks-EKdr6gyH5TvDRRAI-K5nmdA-t500x500-removebg-preview.png" alt="Icono de la Avatar Shop" width="80" height="80">
+                    <h2>Avatar Shop</h2>
+                    <p>El catálogo de ropa, accesorios y objetos UGC creados por Roblox y por la propia comunidad, para personalizar el avatar de cada usuario.</p>
+                    <a href="https://www.roblox.com/catalog?taxonomy=tZsUsd2BqGViQrJ9Vs3Wah&salesTypeFilter=1" target="_blank"><button class="boton">Haga click</button></a>
+                </div>
+                <div class="tarjeta">
+                    <img src="../Images/130068.970-removebg-preview.png" alt="Icono de la inventario de mercancia fan" width="80" height="80">
+                    <h2>Fanmade stuff</h2>
+                    <p>Multiples companias suelen mercancía que pueden estar o no relacionadas con la empresa o algun juego perteneciente al mismo dominio.</p>
+                    <a href="https://www.ositoazul.com.ar/juguetes-por-marca/roblox/" target="_blank"><button class="boton">Haga click</button></a>
+                </div>
+                <div class="tarjeta">
+                    <img src="https://tr.rbxcdn.com/180DAY-2720732a0d03191c9884e43f7275a54a/420/420/Image/Png/noFilter" alt="Icono de imagen Gamepass de Roblox por default" width="80" height="80">
+                    <h2>Pases de juego</h2>
+                    <p>Elementos disponibles en diversos juegos de Roblox. Suelen brindar beneficios o ventajas en juego. Navega por sus juegos y observa si hay alguno disponible.</p>
+                    <a href="https://www.roblox.com/charts" target="_blank"><button class="boton">Haga click</button></a>
+                </div>
+            </div>
+            <h2 class="segundo_titulo">El cambio de la moneda en ROBLOX</h2>
+            <article>
+                <img src="../Images/OIP-removebg-preview.png" alt="Imagen de Player Points de Roblox">
+                <div>
+                    <h3 id="pp">1. Los comienzos: Player Points</h3>
+                    <p>Cuando Roblox comenzó, todavía no existía la economía que conocemos actualmente. Originalmente había un sistema de Roblox Points, que se obtenían principalmente mediante la actividad dentro de la plataforma. Los PLAYER Points, normalmente abreviados como PP, fueron el primer sistema de moneda/puntos de Roblox.
+                    Existían incluso antes del lanzamiento oficial de Roblox. Durante los primeros años de desarrollo de la plataforma, los jugadores podían acumular estos puntos como una forma de demostrar su actividad y sus logros dentro de Roblox.
+                    Roblox todavía era muy diferente a lo que conocemos actualmente. La plataforma estaba mucho más enfocada en jugar, crear y experimentar que en tener una economía virtual.
+                    Por eso, los PLAYER Points funcionaban más como un sistema de reconocimiento que como una moneda comercial moderna. Esto muestra que los primeros puntos estaban muy relacionados con la actividad y el reconocimiento del jugador, y no tanto con gastar dinero. Su principal finalidad era mostrar que un jugador había conseguido determinados logros o tenía una importante participación dentro de la plataforma.</p>
+                </div>
+            </article>
+            <article>
+                <img src="../Images/maxresdefault__3_-removebg-preview.png" alt="Imagen de un TIX">
+                <div>
+                    <h3 id="tix">2. TIX: la moneda gratuita</h3>
+                    <p>Los Tickets, conocidos popularmente como Tix, aparecieron el 2 de agosto de 2007. Fueron la segunda gran moneda de Roblox y coexistieron con los Robux durante casi nueve años. Los Robux habían sido introducidos el 14 de mayo de 2007, reemplazando a los ROBLOX Points como moneda principal. Pero Roblox necesitaba una forma de que los usuarios que no pagaban pudieran participar en su economía. Por eso aparecieron los Tix. Los Tix también estuvieron relacionados con la evolución del sistema de membresías de Roblox. El Builders Club fue introducido el 16 de agosto de 2007 y fue la primera membresía de pago de Roblox. Los miembros recibían diferentes beneficios, entre ellos una cantidad diaria de Robux. Esto creó una diferencia cada vez mayor entre los usuarios gratuitos y los usuarios que pagaban una membresía. Con el tiempo, los Tix generaron problemas para la economía de Roblox.
+                    Como podían conseguirse gratuitamente de muchas maneras, era posible acumular grandes cantidades mediante:
+                    <ul>
+                        <li>Cuentas alternativas o ALTs</li>
+                        <li>Visitas artificiales</li>
+                        <li>Actividad automatizada</li>
+                        <li>Intercambio entre monedas</li>
+                    </ul>
+                    Esto podía introducir grandes cantidades de moneda en la economía sin que existiera necesariamente una actividad económica equivalente.
+                    Además, Roblox quería simplificar su economía.
+                    En marzo de 2016, Roblox anunció que los Tix serían eliminados.</p>
+                </div>
+            </article>
+            <article>
+                <img src="https://static.wikia.nocookie.net/roblox7918/images/f/ff/Robux_2019_gold.png/revision/latest?cb=20211208230858&path-prefix=pt-br" alt="Imagen de los robux en la actualidad">
+                <div>
+                    <h3 id="robux">3. Robux: de moneda virtual a economía completa</h3>
+                    <p>Cuando aparecieron en 2007, los Robux estaban principalmente relacionados con la personalización del avatar y la economía de la plataforma. Los usuarios podían utilizarlos para comprar determinados objetos. Poco después, Roblox comenzó a ampliar las posibilidades de utilización.
+                    Por ejemplo, desde alrededor de 2008, los Robux también podían utilizarse para cuestiones relacionadas con la promoción de juegos y la personalización de los Places. 
+                    Con el crecimiento de Roblox, los Robux comenzaron a utilizarse cada vez más para comprar objetos virtuales. Estos objetos permitían a los jugadores personalizar la apariencia de sus avatares y diferenciarse de otros usuarios. A medida que la plataforma creció, Roblox comenzó a permitir que los propios usuarios crearan contenido y lo vendieran. Esto hizo que los Robux dejaran de ser solamente una moneda utilizada por los jugadores y comenzaran a formar parte de una economía de creadores.
+                    </p>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

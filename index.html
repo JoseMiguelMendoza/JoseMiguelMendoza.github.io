@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Página principal">
+        <meta name="keywords" content="Roblox, ¿Que és?">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            h1, h2, h3{
+                font-weight: 700;
+                font-family: 'Baloo 2', sans-serif;
+                font-size: 30px;
+                padding: 0 10px;
+                margin: 5px 0;
+                color: #222;
+            }
+
+            p {
+                padding: 0 10px;
+                color: #333;
+            }
+
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://wallpapers.com/images/hd/roblox-in-the-plaza-obat1udrzv57ptzz.jpg");
+                background-position: cover;
+                display: flex;
+                flex-direction: column;
+            }
+
+            main{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                flex: 1;
+            }
+
+            div.intro {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 15px 0px;
+            }
+
+            div.intro div {
+                width: 80%;
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://wallpapers.com/images/hd/cool-big-roblox-town-ck58dyowf1o34rrk.jpg");
+                background-size: cover;
+                background-position: center 42%;
+            }
+
+            div.intro div p{
+                color: white;
+            }
+
+            div.video_intro{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+                margin-top: 5px;
+            }
+
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="./Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="./index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./HTML/lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="intro">
+                <div>
+                    <p><i>Roblox pasó de ser una pequeña plataforma de juegos a intentar convertirse en un amplio ecosistema digital. Pero, ¿cómo llegó hasta donde está actualmente y que beneficios o repercusiones tuvo?</i></p>
+                </div>
+            </div>
+    
+            <h1>¿Qué es Roblox?</h1>
+            <p><b>Roblox</b> es una plataforma en línea que permite a sus usuarios jugar, crear y compartir una gran variedad de experiencias interactivas. Desde su lanzamiento en 2006, la plataforma ha evolucionado tanto en sus aspectos tecnológicos como en su comunidad y en las posibilidades que ofrece a sus usuarios.
+            Aunque originalmente estuvo muy orientada hacia un público joven, con el paso del tiempo Roblox comenzó a ampliar su alcance, buscando atraer a personas de diferentes edades y ofreciendo cada vez más herramientas para la creación de contenido.</p>
+    
+            <h2>Propósito de la página</h2>
+            <p>El propósito de esta página es mostrar cómo Roblox evolucionó desde su creación hasta la actualidad, destacando los principales cambios que experimentó a lo largo de los años. Se analizará su evolución tecnológica, la transformación de sus herramientas de creación, el crecimiento y los cambios de su comunidad, el desarrollo de su economía virtual y algunos de los juegos que marcaron diferentes etapas de la plataforma.
+            De esta manera, la página busca mostrar que la evolución de Roblox no se produjo únicamente en el aspecto gráfico o tecnológico, sino también en la forma en que sus usuarios juegan, crean contenido, interactúan y participan dentro de la plataforma.</p>
+            <h3>
+                Introducción a Roblox
+            </h3>
+            <p>Aquí mencionamos una guía introductoria diseñada para quienes son nuevos en Roblox. El contenido explica qué es esta plataforma de juegos, destacando que es un espacio virtual donde la imaginación es el límite y donde los usuarios pueden explorar millones de experiencias creadas por la propia comunidad. Además de la variedad de juegos, el video resalta la importancia de la identidad personal a través de los avatares y enfatiza el compromiso de la plataforma con la seguridad, detallando cómo funcionan los filtros de contenido y las herramientas de control parental para que las familias gestionen la experiencia de juego de manera responsable.</p>
+            <div class="video_intro">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DZo6u0c7DWk?si=-XJjkBUV9zBy3HRP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./HTML/contacto.html">
+                        <img src="./Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

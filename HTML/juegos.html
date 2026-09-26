@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Juegos tendencia en Roblox">
+        <meta name="keywords" content="Roblox, juegos, tendencia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juegos</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://image.api.playstation.com/vulcan/ap/rnd/202504/1706/4cc02203db88b29b535c26b8296c89f983eaf48d67462e1d.png");
+                background-position: cover;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                padding: 0 15px;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+
+            p{
+                color: #222;
+            }
+
+            h1{
+                padding: 0 10px;
+            }
+
+            h1, h2{
+                font-weight: bold;
+                font-size: 30px;
+                margin: 15px 0 5px 0;
+                font-family: 'Baloo 2', sans-serif;
+                color: #333;
+            }
+
+            div.contenedor_juegos{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+            } 
+
+            div.contenedor_juegos > article{
+                display: flex;
+                flex-direction: row;
+                margin: 15px 0;
+                gap: 20px;
+            }
+
+            div.contenedor_juegos > article > div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-right: 10px;
+            }
+            
+            .imagen_juego{
+                width: 355px;
+                height: 300px;
+                border-radius: 25px;
+                min-width: 355px;
+            }
+
+            .boton_play{
+                width: 30px;
+                height: 30px;
+                border-radius: 0;
+            }
+
+            div.contenedor_juegos > article > div > a{
+                display: flex;
+                justify-content: center;
+                background-color: #2c53e0;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Juegos que marcaron historia en Roblox</h1>
+            <div class="contenedor_juegos">
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-8d7d220c927ef2be12d05d9ed11f579e/768/432/Image/Webp/noFilter" alt="Imagen de juego Meepcity"/>
+                    <div>
+                        <h2>Meepcity</h2>
+                        <p>Ayudó a popularizar las experiencias sociales y de convivencia dentro de Roblox. MeepCity es un juego de simulación social que permite a los jugadores crear y personalizar su propio avatar, interactuar con otras personas, decorar casas y tener mascotas llamadas Meeps. Fue uno de los grandes juegos de la primera etapa de expansión de Roblox y se convirtió en el primer juego de la plataforma en superar los mil millones de visitas, marcando un importante crecimiento de los juegos sociales dentro de Roblox.
+                        </p>
+                        <a href="https://www.roblox.com/games/370731277/MeepCity#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://static.wikia.nocookie.net/natural-disaster-survival/images/e/e6/Site-logo.png/revision/latest?cb=20230810063909&path-prefix=ru" alt="Imagen de juego Natural Disaster Survival"/>
+                    <div>
+                        <h2>Natural Disaster Survival</h2>
+                        <p>Uno de los grandes clásicos de Roblox. En Natural Disaster Survival, los jugadores deben sobrevivir a diferentes desastres naturales que aparecen durante cada ronda, como terremotos, tornados, inundaciones, incendios y tsunamis. Su propuesta es sencilla pero muy efectiva: observar el escenario, identificar el peligro y encontrar la mejor manera de mantenerse con vida hasta que termine el desastre.</p>
+                        <a href="https://www.roblox.com/games/189707/Natural-Disaster-Survival#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego"src="https://static.miraheze.org/perfectionrobloxgameswiki/e/e6/SAKTKIA51_6_March_2021_icon.png" alt="Imagen de juego Survive and kill the killers in Area 51"/>
+                    <div>
+                        <h2>Survive and kill the killers in Area 51</h2>
+                        <p>Survive and Kill the Killers in Area 51 combina supervivencia, acción y elementos de terror. Los jugadores deben explorar una versión ficticia del Área 51 mientras enfrentan diferentes enemigos y criaturas que intentan eliminarlos. Su popularidad se relaciona con la gran cantidad de experiencias de temática misteriosa y de terror que surgieron en Roblox durante sus primeras etapas.</p>
+                        <a href="https://www.roblox.com/games/155382109/Survive-and-Kill-the-Killers-in-Area-51#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://merge-fellas.io/thumb/build-a-boat-for-treasure.png" alt="Imagen de juego Build a Boat for Treasure"/>
+                    <div>
+                        <h2>Build a Boat For Treasure</h2>
+                        <p>En Build A Boat For Treasure, los jugadores construyen sus propias embarcaciones utilizando diferentes piezas y materiales para intentar atravesar un largo recorrido lleno de obstáculos. El objetivo es llegar lo más lejos posible y alcanzar el tesoro al final, utilizando creatividad para diseñar barcos capaces de resistir el recorrido. El juego combina construcción, experimentación y aventura.</p>
+                        <a href="https://www.roblox.com/games/537413528/Build-A-Boat-For-Treasure" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-1ec5f77e4ac9e65ed0f19500a262e9c0/768/432/Image/Webp/noFilter" alt="Imagen de juego Work at a Pizza Place"/>
+                    <div>
+                        <h2>Work at a Pizza Place</h2>
+                        <p>Work at a Pizza Place es un juego de simulación en el que los jugadores trabajan juntos en una pizzería. Pueden desempeñar diferentes tareas, como tomar pedidos, preparar pizzas, trabajar en la caja, entregar pedidos o administrar el restaurante. Es uno de los juegos clásicos de Roblox y fue uno de los primeros grandes éxitos de la plataforma; además, fue el primer juego de Roblox en alcanzar los 100 millones de visitas.</p>
+                        <a href="https://www.roblox.com/games/192800/Work-at-a-Pizza-Place" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://www.pockettactics.com/wp-content/uploads/2020/05/roblox-player-flee-the-facility-900x506.jpg" alt="Imagen de juego Flee the Facility"/>
+                    <div>
+                        <h2>Flee The Facility</h2>
+                        <p>Flee the Facility es un juego de terror multijugador en el que un jugador asume el papel de la Bestia, mientras los demás intentan escapar. Los supervivientes deben hackear computadoras para abrir las salidas y escapar antes de ser capturados. La Bestia, por su parte, debe perseguirlos y encerrarlos en cámaras de congelación.</p>
+                        <a href="https://www.roblox.com/games/893973440/Flee-the-Facility#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://vignette.wikia.nocookie.net/typical-games/images/a/ab/EpicMinigamesNormalPic.jpeg/revision/latest?cb=20190816194239" alt="Imagen de juego Epic Minigames"/>
+                    <div>
+                        <h2>Epic Minigames</h2>
+                        <p>Epic Minigames reúne una gran variedad de minijuegos en los que los jugadores compiten o colaboran para superar diferentes desafíos. Las pruebas pueden incluir carreras, parkour, supervivencia y otros retos rápidos, haciendo que cada ronda sea diferente. Su formato está inspirado en juegos de fiesta y permite jugar de manera casual con amigos.</p>
+                        <a href="https://www.roblox.com/games/277751860/Epic-Minigames#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://mrwallpaper.com/images/thumbnail/loomian-legacy-flaming-poster-16jz7ylqg24y6dbu.jpg" alt="Imagen de juego Loomian Legacy"/>
+                    <div>
+                        <h2>Loomian Legacy</h2>
+                        <p>Loomian Legacy es un RPG inspirado en los juegos clásicos de captura y entrenamiento de criaturas. Los jugadores exploran un mundo, capturan y entrenan Loomians, luchan contra otros entrenadores y avanzan a través de una historia. El juego destacó por ofrecer una experiencia más cercana a un RPG tradicional dentro de Roblox, con exploración, combates y criaturas propias.</p>
+                        <a href="https://www.roblox.com/games/306964494/Loomian-Legacy" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://lh3.googleusercontent.com/-5mO6H5r292E/ZTvTx0q6djI/AAAAAAABMOU/uSJUAajU0hwsMOQga5xYlI1fb2aFUcH1gCNcBGAsYHQ/s0/aaeda943da.jpg" alt="Imagen de juego The Mimic"/>
+                    <div>
+                        <h2>The Mimic</h2>
+                        <p>The Mimic es un juego de terror y aventura basado en elementos del folclore japonés y diferentes leyendas. Los jugadores recorren escenarios oscuros, resuelven acertijos y deben escapar de criaturas mientras descubren una historia dividida en diferentes capítulos o libros. Se destacó especialmente por sus escenarios, ambientación y narrativa, llegando a ser considerado uno de los juegos de terror visualmente más elaborados de Roblox.</p>
+                        <a href="https://www.roblox.com/games/6243699076/The-Mimic#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://cdn.wallpapercast.com/wallpapercast-prod-v2/collections/689f259d567a99e8e38536b0/large_1755260320610_wza0whhia1.jpg" alt="Imagen de juego Murder Mystery 2"/>
+                    <div>
+                        <h2>Murder Mystery 2</h2>
+                        <p>Murder Mystery 2 es un juego de deducción social en el que los jugadores reciben uno de tres roles: asesino, sheriff o inocente. El asesino debe eliminar a todos, el sheriff debe descubrirlo y detenerlo, y los inocentes tienen que sobrevivir y tratar de descubrir quién es el culpable. Su sistema de rondas rápidas y la posibilidad de intercambiar y coleccionar objetos hicieron que se convirtiera en uno de los grandes clásicos de Roblox.</p>
+                        <a href="https://www.roblox.com/games/142823291/Murder-Mystery-2#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://wallpaperaccess.com/full/2214449.jpg" alt="Imagen de juego Jailbreak"/>
+                    <div>
+                        <h2>Jailbreak</h2>
+                        <p>Jailbreak es un juego de acción y mundo abierto en el que los jugadores pueden ser criminales o policías. Los criminales deben escapar de la prisión, conseguir vehículos y realizar diferentes robos, mientras que los policías intentan detenerlos. Su mundo abierto, vehículos, persecuciones y actualizaciones constantes lo convirtieron en uno de los juegos más importantes de Roblox desde 2017.</p>
+                        <a href="https://www.roblox.com/games/606849621/Jailbreak" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse3.mm.bing.net/th/id/OIP.bKpeJCcNdCI9beikxqcQtwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Pet Simulator"/>
+                    <div>
+                        <h2>Pet Simulator</h2>
+                        <p>Pet Simulator es una serie de juegos centrada en coleccionar mascotas virtuales. Los jugadores obtienen mascotas mediante huevos, las utilizan para conseguir recursos y desbloquear nuevas zonas y pueden intercambiarlas con otros jugadores. La franquicia popularizó enormemente el género de colección y progresión dentro de Roblox, especialmente con títulos como Pet Simulator X y Pet Simulator 99.</p>
+                        <a href="https://www.roblox.com/games/1599679393/Pet-Simulator" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse1.mm.bing.net/th/id/OIP.i1dIqTIlfcxP6QQOfva-SwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Adopt me"/>
+                    <div>
+                        <h2>Adopt me!</h2>
+                        <p>Adopt Me! es un juego de simulación social centrado originalmente en la adopción y cuidado de mascotas. Los jugadores pueden conseguir animales, criarlos, intercambiarlos, decorar sus casas y personalizar sus personajes. Con el tiempo se convirtió en uno de los juegos más populares de Roblox y ayudó a impulsar el sistema de mascotas, intercambios y economía virtual dentro de la plataforma. Actualmente continúa entre las experiencias más jugadas de Roblox.</p>
+                        <a href="https://www.roblox.com/games/920587237/Adopt-Me#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse1.mm.bing.net/th/id/OIP.tTjDPKQDjJOnGwv5DTR_vgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Animal Hospital"/>
+                    <div>
+                        <h2>Animal Hospital</h2>
+                        <p>Animal Hospital es un juego de simulación y gestión en el que los jugadores trabajan en un hospital dedicado al cuidado de animales. Pueden atender diferentes mascotas, realizar tratamientos y mejorar las instalaciones mientras progresan. Es un ejemplo de cómo Roblox también comenzó a incorporar experiencias de simulación más específicas y elaboradas. Actualmente aparece entre las experiencias populares de la plataforma.</p>
+                        <a href="https://www.roblox.com/games/78515283254292/Animal-Hospital" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://static.deltiasgaming.com/2025/06/Welcome-to-Bloxburg-Nametags-and-Titles-Guide-Image-via-Roblox-Corporation.png" alt="Imagen de juego Welcome to Bloxburg"/>
+                    <div>
+                        <h2>Welcome to Bloxburg!</h2>
+                        <p>Welcome to Bloxburg es un simulador de vida que permite a los jugadores construir y decorar sus propias casas, trabajar para conseguir dinero y desarrollar una vida virtual. Su sistema de construcción y personalización hizo que se convirtiera en una referencia dentro de los juegos de simulación social de Roblox. Durante años también fue conocido por ser una experiencia de pago, antes de pasar a ser gratuita.</p>
+                        <a href="https://www.roblox.com/games/185655149/Welcome-to-Bloxburg#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-b577e4078ba7392dff2e146de3451d39/768/432/Image/Webp/noFilter" alt="Imagen de juego Arsenal"/>
+                    <div>
+                        <h2>Arsenal</h2>
+                        <p>Arsenal es un juego de disparos en primera persona inspirado en otros títulos competitivos del género. Los jugadores compiten en diferentes modos y utilizan una gran variedad de armas, normalmente obteniendo una nueva arma después de conseguir eliminaciones. Su ritmo rápido, variedad de armas y personalización mediante skins lo convirtieron en uno de los shooters más importantes de Roblox.</p>
+                        <a href="https://www.roblox.com/games/286090429/Arsenal" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-9a6167eabc17cccd69511f6213e94b03/768/432/Image/Webp/noFilter" alt="Imagen de juego Piggy"/>
+                    <div>
+                        <h2>Piggy</h2>
+                        <p>Piggy combina terror, supervivencia, resolución de acertijos y persecución. En cada partida, los jugadores deben buscar objetos y resolver diferentes situaciones para escapar de un escenario mientras son perseguidos por Piggy. Además de su jugabilidad, el juego destacó por desarrollar una historia propia mediante capítulos, convirtiéndose en uno de los títulos narrativos de terror más conocidos de Roblox.</p>
+                        <a href="https://www.roblox.com/games/4623386862/Piggy" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse1.mm.bing.net/th/id/OIP.TKyzmb2T3NY2NtS6hvwIugAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Brookheaven"/>
+                    <div>
+                        <h2>Brookheaven 🏡RP</h2>
+                        <p>Brookhaven es un juego de simulación social y roleplay que permite a los jugadores crear sus propias historias y situaciones dentro de una ciudad virtual. Pueden adquirir casas, utilizar vehículos, cambiar su apariencia e interpretar diferentes roles sin tener un objetivo obligatorio que completar. Su libertad para crear situaciones y jugar de manera social hizo que se convirtiera en una de las experiencias más populares de Roblox; actualmente continúa entre las más jugadas.</p>
+                        <a href="https://www.roblox.com/games/4924922222/Brookhaven-RP#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://www.exitlag.com/blog/wp-content/uploads/2025/02/Roblox-BedWars_-Advanced-Gameplay-Tips-and-Strategies-scaled.webp" alt="Imagen de juego Bedwars"/>
+                    <div>
+                        <h2>BedWars</h2>
+                        <p>BedWars es un juego competitivo por equipos inspirado en el conocido modo de juego del mismo nombre. Los jugadores deben proteger su cama mientras intentan destruir las camas de los equipos enemigos. Mientras la cama permanezca intacta, los jugadores pueden reaparecer, por lo que destruirla se convierte en uno de los objetivos principales de cada partida.</p>
+                        <a href="https://www.roblox.com/games/6872265039/BedWars#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse3.mm.bing.net/th/id/OIP.zeTAJ8E-7myaRqsAZhuwJQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Flood Escape 2"/>
+                    <div>
+                        <h2>Flood Escape 2</h2>
+                        <p>En Flood Escape 2, los jugadores deben escapar de diferentes mapas antes de que una inundación alcance el escenario. Para sobrevivir tienen que utilizar parkour, activar mecanismos y trabajar junto a otros jugadores para abrir la salida. La dificultad aumenta progresivamente y obliga a aprender los recorridos y reaccionar rápidamente ante cada situación.</p>
+                        <a href="https://www.roblox.com/games/738339342/Flood-Escape-2" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://static.wikia.nocookie.net/roblox/images/4/49/DOORS_.png/revision/latest?cb=20220813201210" alt="Imagen de juego DOORS"/>
+                    <div>
+                        <h2>DOORS</h2>
+                        <p>DOORS es un juego de terror y supervivencia en el que los jugadores avanzan por una serie de habitaciones generadas con diferentes desafíos y entidades. Para progresar deben explorar, resolver pequeñas situaciones y aprender a reconocer las señales que indican la presencia de determinados enemigos. Su ambientación, sonido y mecánicas de terror ayudaron a convertirlo en uno de los grandes éxitos modernos del género en Roblox.</p>
+                        <a href="https://www.roblox.com/games/6516141723/DOORS" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse1.mm.bing.net/th/id/OIP.NDnRV4WNCbDWAHKCItsYNgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Evade"/>
+                    <div>
+                        <h2>Evade</h2>
+                        <p>Evade es un juego de supervivencia y persecución en el que los jugadores deben escapar de diferentes enemigos mientras recorren mapas llenos de obstáculos. Una de sus características principales es la posibilidad de utilizar movimientos rápidos y diferentes objetos para mantenerse con vida y ayudar a otros jugadores. Su estilo combina situaciones caóticas, humor y elementos de terror.</p>
+                        <a href="https://www.roblox.com/games/9872472334/Evade" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://static.deltiasgaming.com/2025/01/blox-fruits.jpg" alt="Imagen de juego Blox Fruits"/>
+                    <div>
+                        <h2>Blox Fruits</h2>
+                        <p>Blox Fruits es un RPG de acción inspirado principalmente en el anime One Piece. Los jugadores exploran diferentes islas, luchan contra enemigos y otros jugadores, completan misiones y obtienen habilidades mediante diferentes frutas que les proporcionan poderes especiales. Su enorme mundo, sistema de progresión y gran cantidad de habilidades hicieron que se convirtiera en uno de los juegos más populares y duraderos de Roblox.</p>
+                        <a href="https://www.roblox.com/games/2753915549/Blox-Fruits" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://sm.ign.com/t/ign_es/news/b/blade-ball/blade-ball-receives-a-new-battle-pass-alongside-version-66-u_3s2a.600.jpg" alt="Imagen de juego Blade Ball"/>
+                    <div>
+                        <h2>Blade Ball</h2>
+                        <p>Blade Ball es un juego competitivo en el que los jugadores deben defenderse de una pelota que persigue a distintos participantes. Utilizando reflejos y habilidades especiales, deben bloquear o desviar la pelota para evitar ser eliminados. Las partidas son rápidas y se centran principalmente en los reflejos, la precisión y el momento adecuado para reaccionar.</p>
+                        <a href="https://www.roblox.com/games/13772394625/Blade-Ball#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tse2.mm.bing.net/th/id/OIP.LUZHcdaoLRIrv63Fs2JXyQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de juego Combat Warriors"/>
+                    <div>
+                        <h2>Combat Warriors</h2>
+                        <p>Combat Warriors es un juego de combate centrado en enfrentamientos entre jugadores utilizando armas cuerpo a cuerpo y a distancia. Los jugadores pueden conseguir diferentes armas y enfrentarse en mapas abiertos mientras mejoran sus habilidades de combate. Su estilo de juego rápido y violento lo convirtió en una experiencia popular entre quienes buscaban combates más intensos dentro de Roblox.</p>
+                        <a href="https://www.roblox.com/games/4282985734/Combat-Warriors" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/wm/2025/04/garden-in-grow-a-garden.jpg" alt="Imagen de juego Grow A Garden"/>
+                    <div>
+                        <h2>Grow A Garden</h2>
+                        <p>Grow a Garden es un juego de agricultura y progresión en el que los jugadores comienzan con una pequeña parcela y plantan diferentes semillas para producir cultivos. Las cosechas generan dinero que puede utilizarse para comprar nuevas semillas y ampliar las posibilidades del jardín. Su sistema sencillo, progresión automática y mecánicas de colección hicieron que se convirtiera en uno de los mayores fenómenos recientes de Roblox, llegando a establecer récords extraordinarios de jugadores simultáneos en 2025.</p>
+                        <a href="https://www.roblox.com/games/126884695634066/Grow-a-Garden#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://assets.khelnow.com/news/uploads/2024/11/dress_to_impress_game_lead.jpg" alt="Imagen de juego Dress to Impress"/>
+                    <div>
+                        <h2>Dress to Impress</h2>
+                        <p>Dress to Impress es un juego de moda y competición en el que los jugadores deben crear un atuendo siguiendo un tema determinado. Después de vestirse, los participantes desfilan y votan los diseños de los demás jugadores. Su combinación de personalización, competición y creatividad lo convirtió en uno de los juegos sociales más destacados de la etapa reciente de Roblox.</p>
+                        <a href="https://www.roblox.com/games/15101393044/Dress-To-Impress#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://wallpapercave.com/wp/wp14771024.jpg" alt="Imagen de juego Block Tales"/>
+                    <div>
+                        <h2>Block Tales</h2>
+                        <p>Block Tales es un RPG que combina elementos clásicos de los juegos de rol con una estética basada en los bloques característicos de Roblox. Los jugadores exploran diferentes zonas, participan en combates, consiguen habilidades y avanzan a través de una historia. Su propuesta busca recuperar elementos de los RPG clásicos, adaptándolos a las posibilidades de Roblox.</p>
+                        <a href="https://www.roblox.com/games/16483433878/Block-Tales" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-e2d9a31f4b619dd100853bf436881955/768/432/Image/Webp/noFilter" alt="Imagen de juego Dandy's World"/>
+                    <div>
+                        <h2>Dandy's World</h2>
+                        <p>Dandy's World es un juego de terror y supervivencia cooperativo en el que los jugadores deben trabajar juntos para completar objetivos mientras intentan evitar diferentes amenazas. Los jugadores exploran instalaciones y utilizan distintos personajes con habilidades particulares para progresar. Su ambientación combina personajes de apariencia caricaturesca con elementos de terror, creando un contraste característico.</p>
+                        <a href="https://www.roblox.com/games/16116270224/Dandys-World" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+                <article>
+                    <img class="imagen_juego" src="https://tr.rbxcdn.com/180DAY-462965dcfaadda40803a8a887cedfb39/768/432/Image/Webp/noFilter" alt="Imagen de juego Forsaken"/>
+                    <div>
+                        <h2>Forsaken</h2>
+                        <p>Forsaken es un juego de terror asimétrico en el que los jugadores se dividen entre supervivientes y un perseguidor. Los supervivientes deben completar objetivos y utilizar sus habilidades para mantenerse con vida, mientras que el asesino intenta eliminarlos antes de que puedan escapar. Es parte de la nueva generación de experiencias de terror competitivo que han ganado popularidad dentro de Roblox; actualmente figura entre las experiencias más jugadas de la plataforma.</p>
+                        <a href="https://www.roblox.com/games/18687417158/Forsaken#ropro-quick-search" target="_blank"><img class="boton_play" src="../Images/play-buttton.png" alt="Icono de play"></a>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Comentarios de otros jugadores">
+        <meta name="keywords" content="Roblox, Reseñas, Comentarios">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comentarios</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+            
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("https://static.vecteezy.com/system/resources/previews/015/392/263/non_2x/abstract-background-design-pattern-textile-and-fabric-pattern-abstract-element-pattern-free-vector.jpg");
+                background-position: center 10%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                padding: 0 15px;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+
+            p{
+                margin-left: 10px;
+                color: #333;
+            }
+
+            h1{
+                margin-left: 10px;
+                margin-bottom: -10px;
+                font-size: 40px;
+                font-family: 'Baloo 2', sans-serif;
+                color: #222;
+            }
+
+            .testimonios {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin: 20px 10px;
+            }
+
+            .testimonio {
+                background-color: white;
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                padding: 15px;
+                width: 250px;
+                text-align: center;
+            }
+
+            .testimonio .autor {
+                font-weight: bold;
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Lo que dice la comunidad</h1>
+            <div class="intro">
+                <div>
+                    <p><i>Miles de usuarios comparten su experiencia dentro de Roblox todos los días. Estos son algunos testimonios de la comunidad.</i></p>
+                </div>
+            </div>
+            <p>Roblox reúne a millones de jugadores y creadores de todo el mundo. Aquí recopilamos algunos comentarios representativos sobre su experiencia en la plataforma.</p>
+
+            <div class="testimonios">
+                <div class="testimonio">
+                    <img src="../Images/woman-avatar-profile.png" alt="Avatar de mujer incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Lucía, 14 años</p>
+                    <p>"Empecé jugando Adopt Me! y terminé aprendiendo a programar mis propios juegos en Roblox Studio. Nunca pensé que iba a interesarme tanto por la programación."</p>
+                </div>
+                <div class="testimonio">
+                    <img src="../Images/man-avatar-profile.png" alt="Avatar de hombre incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Martín, 40 años</p>
+                    <p>"Gracias al Developer Exchange pude convertir mis primeros Robux en dinero real. Roblox me abrió la puerta al desarrollo de videojuegos."</p>
+                </div>
+                <div class="testimonio">
+                    <img src="../Images/woman-avatar-profile.png" alt="Avatar de mujer incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Sofía, 36 años</p>
+                    <p>"Me tranquiliza que existan controles parentales. Mi hijo juega de forma segura y yo puedo supervisar su actividad."</p>
+                </div>
+                <div class="testimonio">
+                    <img src="../Images/man-avatar-profile.png" alt="Avatar de hombre incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Tomás, 22 años</p>
+                    <p>"Uso Roblox Studio hace un año y medio. Con el Developer Exchange ya pude retirar mis primeros dólares reales por un juego que hice. Pero no es suficiente, uno no puede vivir trabajando de esto."</p>
+                </div>
+                <div class="testimonio">
+                    <img src="../Images/woman-avatar-profile.png" alt="Avatar de mujer incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Camila, 16 años</p>
+                    <p>"Empecé jugando Brookhaven RP con mis amigas y terminé metida en Roblox Studio. Ahora estoy armando mi primer juego."</p>
+                </div>
+                <div class="testimonio">
+                    <img src="../Images/man-avatar-profile.png" alt="Avatar de hombre incognito" width="60" height="60">
+                    <div>
+                        <img src="../Images/star.png" alt="Imagen de estrella">
+                    </div>
+                    <p class="autor">Nicolás, 35 años</p>
+                    <p>"Soy padre y desconfió completamente. Los controles parentales me permiten ver qué juega mi hijo y ponerle límites de tiempo sin problema. Sin embargo, aun con eso, la plataforma es insegura."</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

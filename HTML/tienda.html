@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Tienda de Roblox Fanmade">
+        <meta name="keywords" content="Roblox, Tienda, Mercancía">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+            
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://i.ytimg.com/vi/vP3uVE6Lnk0/maxresdefault.jpg");
+                background-position: cover;
+                display: flex;
+                flex-direction: column;
+            }
+
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                padding: 0 15px;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+
+            main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main > p{
+                margin-left: 10px;
+                color: #333;
+            }
+
+            main > h1{
+                margin-left: 10px;
+                margin-bottom: -10px;
+                font-size: 40px;
+                font-family: "Baloo 2", sans-serif;
+                color: #222;
+            }
+
+            h1.titulo_principal{
+                color: white;
+                background-color: #2c53e0;
+                width: 97%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            div.intro div p{
+                margin-left: 10px;
+            }
+
+            .productos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin: 20px 10px;
+            }
+
+            .producto {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                padding: 20px;
+                width: 220px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .boton{
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                background-color: #2c53e0;
+                color: white;
+                min-width: 150px;
+                min-height: 50px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1 class="titulo_principal">Marketplace</h1>
+            <div class="intro">
+                <div>
+                    <p><i>"Roblox no se juega gratis en su totalidad: existe todo un sistema de compras dentro de la plataforma."</i></p>
+                </div>
+            </div>
+            <p>Roblox ofrece distintas formas de gastar dinero real dentro y fuera de la plataforma, aunque estas no son muy variadas. Nosotros tambien ofrecemos productos de calidad, de marca ROBLOX para aquellos que quieran difundir la imaginación y los sueños. Aquí los productos que vendemos:</p>
+
+            <div class="productos">
+                <div class="producto">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.rcSLxlZwXMU7-ID90I8V8gHaHa?r=0&w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mochila Roja de Roblox" width="70" height="70">
+                    <h2>Mochila Roja - Marca ROBLOX</h2>
+                    <p>Precio: $45.99</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/3/2022/03/roblox-backpack-ff80bfb.jpg?quality=90&fit=620,413" alt="Mochila marca roblox" width="70" height="70">
+                    <h2>Mochila - Marca ROBLOX</h2>
+                    <p>Precio: $60.99</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://media.karousell.com/media/photos/products/2023/12/21/roblox_children_kids_school_ba_1703130277_a58f967f_progressive" alt="Mochila para niños - Marca Roblox e involucra una cartuchera." width="70" height="70">
+                    <h2>Mochila para chicos - Marca ROBLOX</h2>
+                    <p>Precio: $65.99</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://i5.walmartimages.com/seo/Roblox-Backpack-Gamer-Black-Rucksack-Green-Creeper-Zombie-Skeleton-Enderman-Cave-Spider_286688c2-d9f0-42f4-b17b-901f6c3293e6.e1a45c62a4d61106eee2fa4a4c5ed657.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF" alt="Mochila + bolsa de mano - Roblox" width="70" height="70">
+                    <h2>Mochila + Bolsa de Mano - ROBLOX</h2>
+                    <p>Precio: $95.90</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://storegames.com.pe/wp-content/uploads/2024/01/roblox000-3-ph.webp" alt="Tarjeta de regalo de 4500 robux" width="70" height="70">
+                    <h2>Tarjeta de Regalo (4500 ROBUX)</h2>
+                    <p>Precio: $50</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.alAGrMin5xIT2u3IN3bqfgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Icono de Robux" width="70" height="70">
+                    <h2>Tarjeta de Regalo (1300 ROBUX)</h2>
+                    <p>Precio: $10</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_830249-MLU92127197963_092025-O.webp" alt="Icono de Roblox Premium" width="70" height="70">
+                    <h2>Tarjeta de Regalo (2700 ROBUX)</h2>
+                    <p>Precio: $20</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://cdn.kemik.gt/2023/09/ROBLOX100USD-ROBLOX-1200x1200-01.jpg" alt="Tarjeta de regalo de $100" width="70" height="70">
+                    <h2>Tarjeta de Regalo (9000 ROBUX)</h2>
+                    <p>Precio: $100</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_695221-MLA79447789004_102024-O.webp" alt="Tarjeta de regalo por 80" width="70" height="70">
+                    <h2>Tarjeta de Regalo (7500 ROBUX)</h2>
+                    <p>Precio: $80</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.500RRMXbfi91EDxLzfNngwHaEj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Set de personajes de Roblox" width="70" height="70">
+                    <h2>Set de 32 personajes de ROBLOX para armar</h2>
+                    <p>Precio: $400</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://i.pinimg.com/originals/ec/c3/25/ecc325326c49c98d1a326cf0c522d56c.jpg" alt="Set de 6 personajes de Roblox" width="70" height="70">
+                    <h2>Set de 6 personajes de ROBLOX para armar</h2>
+                    <p>Precio: $150</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/3caa01c5-c7e0-4680-bfee-876437762f75.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Teclado marca roblox" width="70" height="70">
+                    <h2>Teclado - Marca ROBLOX</h2>
+                    <p>Precio: $550</p>
+                    <a href="#" target="_blank"><button class="boton">Comprar</button></a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

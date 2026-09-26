@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Preguntas frecuentes de Roblox">
+        <meta name="keywords" content="Roblox, preguntas, respuestas">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preguntas frecuentes</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+            
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://wallpapers.com/images/hd/cool-roblox-scenery-tkl62qo7ujdu2ldc.jpg");
+                background-position: center 10%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                padding: 0 15px;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+
+            main div.intro{
+                margin-left: 10px;
+            }
+
+            main h1{
+                margin-left: 10px;
+            }
+
+            h1{
+                font-family: "Baloo 2", sans-serif;
+                color: #222;
+            }
+
+            p{
+                color: #333;
+            }
+
+            .faq {
+                min-width: 500px;
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+
+            .faq_item {
+                border: 2px solid #2c53e0;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                overflow: hidden;
+            }
+
+            .faq_pregunta {
+                width: 100%;
+                background-color: #2c53e0;
+                color: white;
+                border: none;
+                padding: 12px 15px;
+                font-size: 16px;
+                text-align: left;
+                cursor: pointer;
+            }
+
+            .faq_respuesta {
+                display: none;
+                padding: 12px 15px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Preguntas frecuentes</h1>            
+            <div class="intro">
+                <div>
+                    <p><i>Resolvemos las dudas más comunes sobre Roblox: seguridad, economía, edad mínima y más.</i></p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Roblox es gratis?</button>
+                    <div class="faq_respuesta">
+                        <p>Sí, jugar en Roblox es gratuito. Sin embargo, existen compras opcionales dentro de la plataforma mediante Robux, su moneda virtual.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Qué edad mínima se necesita para jugar?</button>
+                    <div class="faq_respuesta">
+                        <p>No hay una edad mínima estricta, pero Roblox recomienda supervisión de un adulto para usuarios menores de 13 años, y ofrece controles parentales para gestionar la experiencia.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Qué son los Robux?</button>
+                    <div class="faq_respuesta">
+                        <p>Son la moneda virtual de la plataforma. Se usan para comprar accesorios, pases de juego y otros artículos dentro de las experiencias.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Puedo ganar dinero real en Roblox?</button>
+                    <div class="faq_respuesta">
+                        <p>Sí, a través del programa Developer Exchange (DevEx), los creadores pueden convertir sus Robux ganados en dinero real.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">Olvidé mi contraseña, ¿cómo la recupero?</button>
+                    <div class="faq_respuesta">
+                        <p>Se puede restablecer desde la pantalla de inicio de sesión usando la opción "¿Olvidaste tu contraseña?". Por eso Roblox recomienda siempre tener un email verificado asociado a la cuenta: sin él, recuperar el acceso es mucho más difícil.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Cómo protejo mi cuenta de robos o hackeos?</button>
+                    <div class="faq_respuesta">
+                        <p>Roblox recomienda activar la Verificación en 2 Pasos (2SV), usar una contraseña única, nunca compartirla con nadie (ni siquiera con "trucos" que prometen Robux gratis) y cerrar sesión siempre en computadoras compartidas. El personal de Roblox nunca pide la contraseña de un usuario.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Qué hago si detecto un cargo que no reconozco?</button>
+                    <div class="faq_respuesta">
+                        <p>Hay que contactar al soporte de Roblox antes de reclamar el cargo directamente ante el banco o la tarjeta, ya que una vez iniciada una disputa formal, Roblox ya no puede procesar el reembolso.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Qué métodos de pago se pueden usar?</button>
+                    <div class="faq_respuesta">
+                        <p>Roblox acepta tarjetas de crédito/débito, PayPal, tarjetas de regalo (gift cards) y pagos a través de tiendas de aplicaciones como Google Play, Apple/iTunes, Microsoft, PlayStation y Amazon.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Puedo corregir mi fecha de nacimiento si me equivoqué al registrarme?</button>
+                    <div class="faq_respuesta">
+                        <p>Sí, se puede corregir desde la configuración de la cuenta. Sin embargo, dependiendo del cambio, Roblox puede pedir una verificación de identidad (por ejemplo, con un documento oficial) para confirmar la nueva edad antes de aplicarla.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Existen controles parentales?</button>
+                    <div class="faq_respuesta">
+                        <p>Sí, Roblox ofrece una sección completa dedicada a padres y seguridad familiar, con herramientas para supervisar la actividad de menores, filtros de contenido y configuración de privacidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Puedo compartir mi cuenta con otra persona?</button>
+                    <div class="faq_respuesta">
+                        <p>No es recomendable. Compartir el usuario y contraseña es una de las formas más comunes en que la gente pierde el acceso a su cuenta, ya sea por robo o por errores de la otra persona.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_pregunta">¿Qué son las etiquetas de madurez de contenido?</button>
+                    <div class="faq_respuesta">
+                        <p>Son clasificaciones (Mínimo, Leve, Moderado y Restringido) que indican qué tipo de contenido tiene cada experiencia. Determinan qué pueden ver los distintos tipos de cuenta: las experiencias "Restringidas", por ejemplo, solo son accesibles para usuarios mayores de 18 años con la edad verificada.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const preguntas = document.querySelectorAll(".faq_pregunta");
+
+            preguntas.forEach(function (pregunta) {
+                pregunta.addEventListener("click", function () {
+                    const respuesta = pregunta.nextElementSibling;
+
+                    if (respuesta.style.display === "block") {
+                        respuesta.style.display = "none";
+                    } else {
+                        respuesta.style.display = "block";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

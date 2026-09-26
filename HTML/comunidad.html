@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="José Mendoza">
+        <meta name="description" content="Como está conformada la comunidad de Roblox">
+        <meta name="keywords" content="Roblox, comunidad, grupos, eventos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comunidad</title>
+        <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            nav {
+                display: flex; 
+                justify-content: space-evenly; 
+                align-items: center;
+                background-color: #2c53e0;
+            }
+
+            .nav_logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div {
+                text-align: center;
+                height: 75px;
+                flex: 1;
+            }
+
+            nav div a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav div a.link:hover{
+                background-color: white;
+                color: black;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background-color: #f5f6fa;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1, h2{
+                margin-left: 10px;
+                font-weight: bold;
+                font-size: 40px;
+                color: #222;
+                font-family: 'Baloo 2', sans-serif;
+            }
+
+            main div.cont_titulo_prin{
+                display: flex;
+                justify-content: center;
+            }
+
+            h1.titulo_principal{
+                margin-left: 0px;
+                color: white;
+                background-color: #2c53e0;
+                width: 98%;
+                text-align: center;
+            }
+            
+            p{
+                padding: 0 10px;
+                color: #333
+            }
+
+            body, p, a, li, button, input, label {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .contenedor_tarjetas{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .tarjeta{
+                padding: 15px;
+                border-radius: 5px;
+                flex: 1;
+                min-width: 400px;
+            }
+
+            div.tarjeta p {
+                padding: 0;
+                color: white;
+            }
+
+            div.tarjeta[class="tarjeta t1"]{
+                border-left: 4px solid #2c53e0;
+                background-color: #2c53e0;
+                color: white;
+            }
+
+            div.tarjeta[class="tarjeta t2"]{
+                border-left: 4px solid #5175f7;
+                background-color: #5175f7;
+                color: white;
+            }
+
+            div.tarjeta[class="tarjeta t3"]{
+                border-left: 4px solid #99afff;
+                background-color: #99afff;
+                color: white;
+            }
+
+            main article img{
+                width: 98%;
+                min-height: 300px;
+                margin-left: 10px;
+            }
+
+            div.link_discord{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            div.link_discord a {
+                display: flex;
+                background-color: #5865F2;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                min-width: 400px;
+                min-height: 40px;
+                color: white;
+                text-decoration: none;
+            }
+
+            div.link_youtube{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            div.link_youtube a{
+                display: flex;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                min-width: 400px;
+                min-height: 40px;
+                color: black;
+                text-decoration: none;
+            }
+
+            div.link_comunidades_rblx{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            div.link_comunidades_rblx a{
+                display: flex;
+                background-color: #030000;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                min-width: 400px;
+                min-height: 50px;
+                color: rgb(255, 253, 253);
+                text-decoration: none;
+            }
+
+            div.enlaces{
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+
+            main article div a img {
+                width: 30px;
+                height: 30px;
+            }
+
+            footer {
+                background-color: #2c53e0;
+                color: white;
+                padding: 20px;
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            footer div.lad_izq{
+                border-right: 2px solid white;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 31px;
+            }
+
+            footer div.lad_izq p{
+                margin: 0;
+                color: white;
+            }
+
+            footer div.lad_der{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            footer div.lad_der > div{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            footer div.lad_der div p{
+                color: white;
+            }
+
+            footer div a{
+                text-decoration: none;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer div a img{
+                width: 20px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <img src="../Images/roblox-logo-2022.png" height="50px" width="140px" alt="Logo de Roblox azul">
+                </div>
+                <div>
+                    <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div>
+                    <a class="link" href="./evolucion.html">Evolución</a>
+                </div>
+                <div>
+                    <a class="link" href="./juegos.html">Juegos</a>
+                </div>
+                <div>
+                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                </div>
+                <div>
+                    <a class="link" href="./preguntas.html">
+                    Preguntas frecuentes</a>
+                </div>
+                <div>
+                    <a class="link" href="./tienda.html">Tienda</a>
+                </div>
+                <div>
+                    <a class="link" href="./economia.html">Economía</a>
+                </div>
+                <div>
+                    <a class="link" href="./comunidad.html">Comunidad</a>
+                </div>
+                <div>
+                    <a class="link" href="./lineatemp.html">Línea temporal</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="cont_titulo_prin">
+                <h1 class="titulo_principal">Comunidades</h1>
+            </div>
+            <article>
+                <h2>Los usuarios y creadores de contenido</h2>
+                <p>
+                    Todos ellos fueron fundamentales para el crecimiento de Roblox, ya que transformaron la plataforma de un simple espacio para jugar en una comunidad donde las personas también pueden crear, compartir y generar ingresos.
+                    A diferencia de otros videojuegos tradicionales, Roblox no depende únicamente de un estudio central para producir contenido. Su motor de crecimiento es la propia comunidad: millones de personas que diseñan experiencias, crean objetos virtuales y generan contenido que otros usuarios consumen a diario. Esto convierte a Roblox en un servicio tanto como en un juego.
+                </p>
+            </article>
+            <article>
+                <h2>Creadores de contenido</h2>
+                <p>El programa de Contenido Generado por el Usuario (UGC) permite a diseñadores independientes crear y vender accesorios, ropa y objetos para los avatares. Esto ha dado lugar a una verdadera economía creativa dentro de la plataforma.</p>
+                <div class="contenedor_tarjetas">
+                    <div class="tarjeta t1">
+                        <h3>Accesorios</h3>
+                        <p>Sombreros, cabello, alas, objetos decorativos para personalizar avatares.</p>
+                    </div>
+                    <div class="tarjeta t2">
+                        <h3>Ropa</h3>
+                        <p>Camisetas, pantalones y trajes diseñados por miembros de la comunidad.</p>
+                    </div>
+                    <div class="tarjeta t3">
+                        <h3>Ingresos reales</h3>
+                        <p>Los creadores pueden convertir Robux ganados en dinero real mediante el programa DevEx.</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Eventos y el RDC</h2>
+                <img src="https://deusens.com/uploads/blog/2025/09/RDC-2025/RDC25-general.webp" alt="Imagen de personas invitadas viviendo momentos dentro de RDC">
+                <p>
+                    Cada año, Roblox organiza el RDC o Roblox Developers Conference, un evento donde reúne a los creadores más destacados de la plataforma para compartir novedades técnicas, premiar proyectos sobresalientes y fortalecer el vínculo entre la empresa y su comunidad de desarrolladores.
+                    El RDC es un evento híbrido (presencial y virtual) por invitación, que reúne a desarrolladores, marcas y creadores de Roblox de todo el mundo. Es un espacio para conectar, aprender y compartir ideas entre los creadores más innovadores de la comunidad global. 
+                    Se realiza todos los años en San José, California. La edición de 2025 tuvo lugar del 5 al 6 de septiembre de 2025, mientras que la de 2026 está prevista del 10 al 12 de septiembre, con más días de duración que la anterior. 
+                    Un evento típico de RDC incluye anuncios de actualizaciones de la plataforma, oportunidades de networking para desarrolladores destacados, marcas y otros creadores, y presentaciones de próximas funciones de Roblox. También incluye los Roblox Innovation Awards, los premios anuales que reconocen a los mejores creadores de la plataforma. 
+                </p>
+            </article>
+            <article>
+                <h2>Grupos y organización social</h2>
+                <img src="https://wallpapers.com/images/hd/cool-roblox-pictures-zrqgg26w50c0ux82.jpg" alt="Imagen de avatares de Roblox juntos">
+                <p>
+                    Dentro de Roblox, los usuarios pueden crear grupos: comunidades organizadas con roles, jerarquías y objetivos propios, ya sean estudios de desarrollo, clanes de un juego específico o comunidades de fanáticos. Estos grupos suelen tener su propia economía interna y sistemas de administración. El tamaño de una comunidad se mide por su cantidad de miembros, y algunas de las comunidades más grandes de Roblox superan los 13 millones de integrantes.
+                </p>
+            </article>
+            <div class="enlaces">
+                <div class="link_discord">
+                    <a href="https://discord.gg/robloxunofficial" target="_blank">
+                        <img src="../Images/discord.png" alt="Icono de Discord">
+                        Enlace a Comunidad de Roblox en Discord
+                    </a>
+                </div>
+                <div class="link_youtube">
+                    <a href="https://www.youtube.com/Roblox" target="_blank">
+                        <img src="../Images/youtube.png" alt="Icono de Youtube">
+                        Enlace a Canal de Roblox en Youtube
+                    </a>
+                </div>
+                <div class="link_comunidades_rblx">
+                    <a href="https://www.roblox.com/communities" target="_blank">
+                        <img src="../Images/roblox.png" alt="Icono de Roblox Communities">
+                        Enlace a Comunidades en Roblox
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="lad_izq">
+                <p>Inicio</p>
+                <p>Trabajo práctico integrador</p>
+                <p>Realizado por José Mendoza</p>
+                <p>Introducción a la programación web</p>
+            </div>
+            <div class="lad_der">
+                <div>
+                    <a href="https://www.roblox.com/home" target="_blank">
+                        <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
+                    </a>
+                    <p>Página web principal de Roblox</p>
+                </div>
+                <div>
+                    <a href="https://x.com/Roblox" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    </a>
+                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                </div>
+                <div>
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                        <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
+                    </a>
+                    <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contactos">
+                    </a>
+                    <p>Contactanos - Soporte</p>
+                </div>
+            </div>
+        </footer>  
+    </body>
+</html>
