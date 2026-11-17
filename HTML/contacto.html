@@ -3,188 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="José Mendoza">
-        <meta name="description" content="Página de contacto a nuestro servidor">
-        <meta name="keywords" content="Roblox, ayuda, soporte">
+        <meta name="description" content="Formulario de contacto para enviar consultas, sugerencias o pedidos de ayuda sobre este sitio de Roblox.">
+        <meta name="keywords" content="Roblox, contacto, ayuda, soporte, formulario">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contáctanos</title>
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#2c53e0">
+        <title>Contáctanos | Soporte y consultas sobre Roblox</title>
         <link rel="icon" href="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-        <style>
-            nav {
-                display: flex; 
-                justify-content: space-evenly; 
-                align-items: center;
-                background-color: #2c53e0;
-            }
-
-            .nav_logo{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            nav div {
-                text-align: center;
-                height: 75px;
-                flex: 1;
-            }
-
-            nav div a {
-                color: white;
-                text-decoration: none;
-                display: flex;
-                height: 100%;
-                justify-content: center;
-                align-items: center;
-            }
-
-            nav div a.link:hover{
-                background-color: white;
-                color: black;
-            }
-
-            body, p, a, li, button, input, label {
-                font-family: 'Inter', sans-serif;
-            }
-
-            body {
-                margin: 0;
-                min-height: 100vh;
-                background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("https://wallpapers.com/images/hd/cool-roblox-scenery-tkl62qo7ujdu2ldc.jpg");
-                background-position: center 10%;
-                display: flex;
-                flex-direction: column;
-            }
-
-            footer {
-            background-color: #2c53e0;
-            color: white;
-            padding: 20px;
-            margin-top: auto;
-            display: flex;
-            justify-content: center;
-            }
-
-            footer div.lad_izq{
-                border-right: 2px solid white;
-                text-align: right;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 18px;
-            }
-
-            footer div.lad_izq p{
-                margin: 0;
-                padding: 0 15px;
-            }
-
-            footer div.lad_der{
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            footer div.lad_der > div{
-                display: flex;
-                flex-direction: row;
-                text-align: left;
-            }
-
-            footer div a{
-                text-decoration: none;
-                margin: 0 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            footer div a img{
-                width: 20px;
-                height: 20px;
-            }
-
-            main{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 800px;
-                margin: -10px 0 25px 0;
-            }
-
-            h1{
-                text-decoration: underline;
-                font-family: 'Baloo 2', sans-serif;
-            }
-
-            main form{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                border-radius: 10px;
-                border: 3px solid black;
-                padding: 25px;
-                min-width: 500px;
-                min-height: 600px;
-                gap: 15px;
-                background-color: rgb(181, 194, 255);
-            }
-
-            main form p{
-                font-weight: bold;
-            }
-
-            main form input[type="text"]{
-                border-radius: 20px;
-                padding: 10px;
-                border-color: white;
-            }
-
-            main form input[type="tel"]{
-                border-radius: 20px;
-                padding: 10px;
-                border-color: white;
-            }
-
-            main form input[type="date"]{
-                border-radius: 20px;
-                padding: 10px;
-                border-color: white;
-            }
-
-            main form input[type="email"]{
-                border-radius: 20px;
-                padding: 10px;
-                border-color: white;
-            }
-
-            main form input[type="button"]{
-                border-radius: 20px;
-                padding: 10px;
-                min-width: 150px;
-                border-color: black;
-                background-color: black;
-                color: white;
-            }
-
-            main form input[type="file"]{
-                border-radius: 20px;
-                padding: 10px;
-                min-width: 150px;
-                border-color: white;
-                background-color: rgb(181, 194, 255);
-                color: black;
-            }
-
-            main form div label[for="masculino"]{
-                font-weight: none;
-            }
-        </style>
+        <link rel="stylesheet" href="../CSS/estilos_contacto.css">
+        <script src="../JS/script_contacto.js" defer></script>
     </head>
-    <body>
+    <body id="inicio_pagina">
+        <!-- Enlace para saltar el menú (accesibilidad con teclado) -->
+        <a class="saltar_menu" href="#contenido">Saltar al contenido principal</a>
+
+        <!-- ENCABEZADO: logo + menú de navegación -->
         <header>
             <nav>
                 <div class="nav_logo">
@@ -200,11 +35,10 @@
                     <a class="link" href="./juegos.html">Juegos</a>
                 </div>
                 <div>
-                    <a class="link" href="./testimonios.html"> Comentarios</a>
+                    <a class="link" href="./testimonios.html">Comentarios</a>
                 </div>
                 <div>
-                    <a class="link" href="./preguntas.html">
-                    Preguntas frecuentes</a>
+                    <a class="link" href="./preguntas.html">Preguntas frecuentes</a>
                 </div>
                 <div>
                     <a class="link" href="./tienda.html">Tienda</a>
@@ -220,66 +54,128 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <h1>Formulario</h1>
-            <form action="#" method="post">
-                <label for="nombre">Ingrese su nombre:</label>
-                <input type="text" id="nombre" name="nombre" tabindex="1">
 
-                <label for="apellido">Ingrese su apellido:</label>
-                <input type="text" id="apellido" name="apellido" tabindex="2">
+        <main id="contenido">
 
-                <label for="fecha-nacimiento">Ingrese su fecha de nacimiento:</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" tabindex="3">
+            <!-- PORTADA DE LA SECCIÓN -->
+            <section class="portada">
+                <h1>Contáctanos</h1>
+                <p>Complete el formulario con sus datos y cuéntenos su situación.</p>
+            </section>
 
-                <label for="telefono">Ingrese su teléfono móvil:</label>
-                <input type="tel" id="telefono" name="telefono" tabindex="4">
+            <!-- FORMULARIO -->
+            <section class="contacto">
+                <form class="formulario" id="formulario_contacto" action="#" method="post">
+                    <p class="formulario_nota">Los campos marcados con <span aria-hidden="true">*</span> son obligatorios.</p>
 
-                <div>
-                    <p>Seleccione su sexo:</p>
-                    <input type="radio" name="sexo" id="masculino" value="masculino" tabindex="5">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" name="sexo" id="femenino" value="femenino" tabindex="6">
-                    <label for="femenino">Femenino</label>
-                </div>
+                    <div class="campo">
+                        <label for="nombre">Ingrese su nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="given-name" required data-validar aria-describedby="error_nombre">
+                        <p class="campo_error" id="error_nombre"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Ingrese su apellido <span class="obligatorio" aria-hidden="true">*</span></label>
+                        <input type="text" id="apellido" name="apellido" autocomplete="family-name" required data-validar aria-describedby="error_apellido">
+                        <p class="campo_error" id="error_apellido"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-nacimiento">Ingrese su fecha de nacimiento <span class="obligatorio" aria-hidden="true">*</span></label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" autocomplete="bday" data-validar aria-describedby="error_fecha-nacimiento" required>
+                        <p class="campo_error" id="error_fecha-nacimiento"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Ingrese su teléfono móvil</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" data-validar aria-describedby="ayuda_telefono error_telefono">
+                        <p class="campo_ayuda" id="ayuda_telefono">Puede incluir el código de país, por ejemplo +54.</p>
+                        <p class="campo_error" id="error_telefono"></p>
+                    </div>
+                    <fieldset class="campo campo_ancho">
+                        <legend>Seleccione su sexo</legend>
+                        <br>
+                        <div class="opciones">
+                            <div class="opcion">
+                                <input type="radio" name="sexo" id="masculino" value="masculino" checked>
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            <div class="opcion">
+                                <input type="radio" name="sexo" id="femenino" value="femenino">
+                                <label for="femenino">Femenino</label>
+                            </div>
+                            <div class="opcion">
+                                <input type="radio" name="sexo" id="no-indica" value="no-indica">
+                                <label for="no-indica">Prefiero no decirlo</label>
+                            </div>
+                        </div>
+                        <p class="campo_error" id="error_sexo"></p>
+                    </fieldset>
+                    <div class="campo campo_ancho">
+                        <label for="email">Ingrese su email <span class="obligatorio" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required data-validar aria-describedby="error_email">
+                        <p class="campo_error" id="error_email"></p>
+                    </div>
+                    <div class="campo campo_ancho">
+                        <label for="descripcion">Describa su situación <span class="obligatorio" aria-hidden="true">*</span></label>
+                        <textarea id="descripcion" name="descripcion" rows="6" required data-validar aria-describedby="error_descripcion"></textarea>
+                        <p class="campo_error" id="error_descripcion"></p>
+                    </div>
+                    <div class="campo campo_ancho">
+                        <label for="archivo">Archivo adjunto</label>
+                        <input type="file" id="archivo" name="archivo" accept=".jpg,.jpeg,.png,.pdf" data-validar aria-describedby="ayuda_archivo error_archivo">
+                        <p class="campo_ayuda" id="ayuda_archivo">Formatos JPG, PNG o PDF, de hasta 5 MB.</p>
+                        <p class="campo_error" id="error_archivo"></p>
+                    </div>
 
-                <label for="email">Ingrese su email:</label>
-                <input type="email" name="email" id="email" tabindex="7">
+                    <div class="formulario_acciones">
+                        <!-- role="alert": un lector de pantalla lo anuncia apenas aparece -->
+                        <p class="formulario_resumen" id="resumen_errores" role="alert"></p>
+                        <button type="submit" class="boton">Enviar</button>
+                    </div>
+                </form>
 
-                <label for="descripcion">Describe tu situación:</label>
-                <input type="text" name="descripcion" id="descripcion" tabindex="8">
-                <label for="archivo">Archivo: </label>
-                <input type="file" name="archivo" id="archivo" tabindex="9">
-                <div>
-                    <input type="button" value="Enviar" tabindex="10">
-                </div>
-            </form>
+                <!-- MENSAJE DE GRACIAS: está oculto y JS lo muestra cuando el formulario se envía bien -->
+                <section class="confirmacion" id="confirmacion" aria-labelledby="titulo_confirmacion" hidden>
+                    <h2 id="titulo_confirmacion" tabindex="-1">¡Gracias!</h2>
+                    <p>Hemos recibido su consulta.</p>
+                    <button type="button" class="boton" id="otra_consulta">Enviar otra consulta</button>
+                </section>
+            </section>
+
+            <!-- VOLVER ARRIBA -->
+            <p class="volver_arriba"><a href="#inicio_pagina">Volver arriba ↑</a></p>
         </main>
+
+        <!-- PIE DE PÁGINA -->
         <footer>
             <div class="lad_izq">
-                <p>Inicio</p>
+                <p>Contacto</p>
                 <p>Trabajo práctico integrador</p>
                 <p>Realizado por José Mendoza</p>
                 <p>Introducción a la programación web</p>
             </div>
             <div class="lad_der">
                 <div>
-                    <a href="https://www.roblox.com/home" target="_blank">
+                    <a href="https://www.roblox.com/home" target="_blank" rel="noopener noreferrer">
                         <img src="https://i.pinimg.com/170x/2d/86/10/2d861021980ce7ecafe733d9e08bb48f.jpg" alt="Icono de Roblox">
                     </a>
                     <p>Página web principal de Roblox</p>
                 </div>
                 <div>
-                    <a href="https://x.com/Roblox" target="_blank">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=256" alt="Icono de Twitter/X">
+                    <a href="https://x.com/Roblox" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&amp;w=256" alt="Icono de Twitter/X">
                     </a>
-                    <p>Cuenta de Twitter de Roblox Latinoamerica</p>
+                    <p>Cuenta de Twitter de Roblox Latinoamérica</p>
                 </div>
                 <div>
-                    <a href="https://about.roblox.com/es/newsroom" target="_blank">
+                    <a href="https://about.roblox.com/es/newsroom" target="_blank" rel="noopener noreferrer">
                         <img src="https://img.icons8.com/color/1200/roblox-studio.jpg" alt="Icono de Roblox Newsroom">
                     </a>
                     <p>Roblox Newsroom - Sala de Prensa</p>
+                </div>
+                <div>
+                    <a href="./contacto.html">
+                        <img src="../Images/telephone.png" alt="Icono de contacto">
+                    </a>
+                    <p>Contáctanos - Soporte</p>
                 </div>
             </div>
         </footer>

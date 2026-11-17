@@ -1,0 +1,504 @@
+/* ==========================================================
+   estilos_lineatemp.css - Página de Línea temporal
+   ========================================================== */
+
+/* ---------- Base ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body, p, a, li, button, input, label {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #e1f0fd;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: 'Baloo 2', sans-serif;
+    color: #222;
+    margin: 0 0 10px 0;
+}
+
+p {
+    color: #222;
+    line-height: 1.7;
+}
+
+main {
+    flex: 1;
+}
+
+/* ---------- Enlace "saltar al contenido" ---------- */
+.saltar_menu {
+    position: absolute;
+    left: 10px;
+    top: -60px;
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+}
+
+.saltar_menu:focus {
+    top: 0;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2c53e0;
+}
+
+.nav_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div {
+    text-align: center;
+    height: 75px;
+    flex: 1;
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div a.link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #ffb703;
+    outline-offset: 2px;
+}
+
+/* ---------- PORTADA ---------- */
+.portada {
+    padding: 50px 20px;
+    text-align: center;
+    background-image: linear-gradient(135deg, #1b3bb0, #2c53e0 60%, #5175f7);
+}
+
+.portada h1 {
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.portada p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #eef2ff;
+    font-size: 1.1rem;
+}
+
+.portada a {
+    color: white;
+    font-weight: 500;
+}
+
+/* ---------- FILTROS ---------- */
+.filtros {
+    width: 92%;
+    max-width: 900px;
+    margin: 35px auto 10px auto;
+    text-align: center;
+}
+
+.filtros_titulo {
+    font-size: 1.2rem;
+}
+
+.filtros_botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filtro {
+    padding: 8px 20px;
+    background-color: white;
+    color: #1b3bb0;
+    border: 2px solid #2c53e0;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filtro:hover {
+    background-color: #e8edff;
+}
+
+/* El filtro elegido se ve "presionado" */
+.filtro[aria-pressed="true"] {
+    background-color: #2c53e0;
+    color: white;
+}
+
+/* ---------- LÍNEA HORIZONTAL ---------- */
+.linea {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.pista_contenedor {
+    overflow-x: auto;
+    padding: 10px 0 20px 0;
+}
+
+.pista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: max-content;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.hito {
+    position: relative;
+    flex: 0 0 150px;
+}
+
+/* El tramo de línea que pasa por detrás de cada punto */
+.hito::before {
+    content: "";
+    position: absolute;
+    top: 41px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #2c53e0;
+}
+
+.hito_boton {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hito_anio {
+    display: block;
+    height: 24px;
+    margin-bottom: 8px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.hito_punto {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto 10px auto;
+    background-color: white;
+    border: 4px solid #2c53e0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.hito_titulo {
+    display: block;
+    padding: 0 8px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #333;
+}
+
+.hito_boton:hover .hito_punto {
+    transform: scale(1.25);
+}
+
+/* Hito seleccionado */
+.hito_boton[aria-current="true"] .hito_punto {
+    background-color: #2c53e0;
+    transform: scale(1.5);
+}
+
+.hito_boton[aria-current="true"] .hito_anio {
+    color: #1b3bb0;
+    font-weight: 700;
+}
+
+.hito_boton[aria-current="true"] .hito_titulo {
+    font-weight: 500;
+    color: #111;
+}
+
+/* Color del punto según la categoría */
+.hito.categoria_economia .hito_punto {
+    border-color: #b45309;
+}
+
+.hito.categoria_tecnologia .hito_punto {
+    border-color: #047857;
+}
+
+.hito.categoria_comunidad .hito_punto {
+    border-color: #7e22ce;
+}
+
+.hito.categoria_economia .hito_boton[aria-current="true"] .hito_punto {
+    background-color: #b45309;
+}
+
+.hito.categoria_tecnologia .hito_boton[aria-current="true"] .hito_punto {
+    background-color: #047857;
+}
+
+.hito.categoria_comunidad .hito_boton[aria-current="true"] .hito_punto {
+    background-color: #7e22ce;
+}
+
+.aviso_js {
+    text-align: center;
+}
+
+/* ---------- CONTROLES Y DETALLE ---------- */
+.detalle_seccion {
+    width: 92%;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contador {
+    margin: 0;
+    font-weight: 500;
+}
+
+.control {
+    padding: 10px 20px;
+    background-color: #2c53e0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.control:hover:not(:disabled) {
+    background-color: #1b3bb0;
+}
+
+.control:disabled {
+    background-color: #9aa8d8;
+    cursor: not-allowed;
+}
+
+.detalle {
+    min-height: 220px;
+    padding: 25px;
+    background-color: white;
+    border-top: 6px solid #2c53e0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(44, 83, 224, 0.15);
+}
+
+.detalle h2 {
+    font-size: 1.8rem;
+}
+
+.detalle_anio {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 2px 14px;
+    background-color: #2c53e0;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    line-height: 1.7;
+}
+
+.detalle_categoria {
+    display: inline-block;
+    margin: 0 0 8px 0;
+    padding: 2px 14px;
+    background-color: #2c53e0;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    line-height: 1.7;
+}
+
+.detalle_categoria.categoria_economia {
+    background-color: #b45309;
+}
+
+.detalle_categoria.categoria_tecnologia {
+    background-color: #047857;
+}
+
+.detalle_categoria.categoria_comunidad {
+    background-color: #7e22ce;
+}
+
+.detalle_enlace {
+    display: inline-block;
+    margin-top: 5px;
+    color: #1b3bb0;
+    font-weight: 500;
+}
+
+/* ---------- Volver arriba ---------- */
+.volver_arriba {
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+.volver_arriba a {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #2c53e0;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.volver_arriba a:hover {
+    background-color: #1b3bb0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #2c53e0;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer div.lad_izq {
+    border-right: 2px solid white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 31px;
+}
+
+footer div.lad_izq p {
+    margin: 0;
+    padding: 0 15px;
+    color: white;
+}
+
+footer div.lad_der {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer div.lad_der > div {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+footer div.lad_der div p {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav div {
+        flex: 1 1 33%;
+        height: 55px;
+    }
+
+    .nav_logo {
+        flex: 1 1 100%;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .controles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contador {
+        order: -1;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .detalle {
+        padding: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer div.lad_izq {
+        border-right: none;
+        border-bottom: 2px solid white;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}

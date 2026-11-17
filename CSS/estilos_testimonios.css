@@ -1,0 +1,394 @@
+/* ==========================================================
+   estilos_testimonios.css - Página de Comentarios
+   ========================================================== */
+
+/* ---------- Base ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .testimonio {
+        animation: none;
+        transition: none;
+    }
+
+    .testimonio:hover {
+        transform: none;
+    }
+}
+
+body, p, a, li, button, input, label, span {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("https://static.vecteezy.com/system/resources/previews/015/392/263/non_2x/abstract-background-design-pattern-textile-and-fabric-pattern-abstract-element-pattern-free-vector.jpg");
+    background-position: center 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    font-family: 'Baloo 2', sans-serif;
+    color: #222;
+    margin: 0 0 10px 0;
+}
+
+p {
+    color: #333;
+    line-height: 1.7;
+}
+
+main {
+    flex: 1;
+}
+
+/* ---------- Enlace "saltar al contenido" ---------- */
+.saltar_menu {
+    position: absolute;
+    left: 10px;
+    top: -60px;
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+}
+
+.saltar_menu:focus {
+    top: 0;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2c53e0;
+}
+
+.nav_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div {
+    text-align: center;
+    height: 75px;
+    flex: 1;
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div a.link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible {
+    outline: 3px solid #ffb703;
+    outline-offset: 2px;
+}
+
+/* ---------- PORTADA ---------- */
+.portada {
+    padding: 50px 20px;
+    text-align: center;
+    background-image: linear-gradient(135deg, #1b3bb0, #2c53e0 60%, #5175f7);
+    box-shadow: 0 6px 18px rgba(44, 83, 224, 0.3);
+}
+
+.portada h1 {
+    color: white;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+}
+
+.portada p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #eef2ff;
+    font-size: 1.1rem;
+}
+
+/* ---------- COMENTARIOS ---------- */
+.comentarios {
+    width: 92%;
+    max-width: 1100px;
+    margin: 3rem auto;
+}
+
+/* Introducción en un recuadro blanco con borde celeste */
+.comentarios_intro {
+    max-width: 750px;
+    margin: 0 auto 2.2rem auto;
+    padding: 0.9rem 1.4rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #99afff;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(44, 83, 224, 0.12);
+}
+
+/* Grilla: las tarjetas se reparten el ancho y bajan de fila cuando no entran */
+.testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+/* Cada tarjeta toma uno de los tres azules del sitio (variable --acento) */
+.testimonio {
+    --acento: #2c53e0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: white;
+    border: 2px solid var(--acento);
+    border-top: 10px solid var(--acento);
+    border-radius: 18px;
+    box-shadow: 0 5px 14px rgba(44, 83, 224, 0.18);
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: aparecer 0.6s ease both;
+}
+
+.testimonio:nth-child(3n + 2) {
+    --acento: #5175f7;
+}
+
+.testimonio:nth-child(3n + 3) {
+    --acento: #99afff;
+}
+
+.testimonio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 26px rgba(44, 83, 224, 0.28);
+}
+
+/* Las tarjetas entran una detrás de otra (hasta la sexta; las demás, juntas) */
+.testimonio:nth-child(2) { animation-delay: 0.08s; }
+.testimonio:nth-child(3) { animation-delay: 0.16s; }
+.testimonio:nth-child(4) { animation-delay: 0.24s; }
+.testimonio:nth-child(5) { animation-delay: 0.32s; }
+.testimonio:nth-child(n + 6) { animation-delay: 0.4s; }
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatar + nombre + edad + estrellas, sobre una franja celeste clara */
+.testimonio_cabecera {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    background-image: linear-gradient(135deg, #e8edff, white);
+    border-bottom: 1px solid #d6defc;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 4px solid var(--acento);
+    border-radius: 50%;
+    background-color: #e8edff;
+    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(44, 83, 224, 0.3);
+}
+
+.testimonio_cabecera p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.autor_nombre {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.autor_edad {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Estrellas doradas (las vacías se ven como contorno, del mismo color) */
+.estrellas {
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: #f5b301;
+    text-shadow: 0 1px 2px rgba(245, 179, 1, 0.4);
+}
+
+/* La cita ocupa el resto de la tarjeta, así todas quedan del mismo alto */
+.testimonio blockquote {
+    position: relative;
+    flex: 1;
+    margin: 0;
+    padding: 0.4rem 1.4rem 1.6rem;
+}
+
+/* Comilla decorativa grande, con el color de la tarjeta */
+.testimonio blockquote::before {
+    content: "“";
+    display: block;
+    height: 2.2rem;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--acento);
+}
+
+.testimonio blockquote::after {
+    content: "”";
+    display: block;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 3.5rem;
+    height: 2rem;
+    line-height: 1.3;
+    color: var(--acento);
+    text-align: end;
+}
+
+.testimonio blockquote p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* ---------- Volver arriba ---------- */
+.volver_arriba {
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+.volver_arriba a {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #2c53e0;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.volver_arriba a:hover {
+    background-color: #1b3bb0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #2c53e0;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer div.lad_izq {
+    border-right: 2px solid white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 31px;
+}
+
+footer div.lad_izq p {
+    margin: 0;
+    padding: 0 15px;
+    color: white;
+}
+
+footer div.lad_der {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer div.lad_der > div {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+footer div.lad_der div p {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav div {
+        flex: 1 1 33%;
+        height: 55px;
+    }
+
+    .nav_logo {
+        flex: 1 1 100%;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .portada {
+        padding: 3rem 1rem 3.5rem;
+    }
+
+    .testimonios {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer div.lad_izq {
+        border-right: none;
+        border-bottom: 2px solid white;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}

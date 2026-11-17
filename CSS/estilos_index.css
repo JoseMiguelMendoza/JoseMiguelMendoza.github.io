@@ -1,0 +1,376 @@
+/* ==========================================================
+    estilos_index.css - Página de inicio
+   ========================================================== */
+
+/* ---------- Tipografía base ---------- */
+body, p, a, li, button, input, label {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Página ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #e1f0fd;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Enlace "saltar al contenido" (solo visible con el teclado) ---------- */
+.saltar_menu {
+    position: absolute;
+    left: 10px;
+    top: -60px;
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+}
+
+.saltar_menu:focus {
+    top: 0;
+}
+
+/* ---------- NAV (igual que antes) ---------- */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2c53e0;
+}
+
+.nav_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div {
+    text-align: center;
+    height: 75px;
+    flex: 1;
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div a.link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #ffb703;
+    outline-offset: 2px;
+}
+
+/* ---------- Títulos y textos ---------- */
+h1, h2, h3 {
+    font-family: 'Baloo 2', sans-serif;
+    color: #222;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+/* ---------- PORTADA (hero) ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    text-align: center;
+    background-image: linear-gradient(rgba(10, 20, 60, 0.65), rgba(10, 20, 60, 0.85)),
+                      url("https://wallpapers.com/images/hd/roblox-in-the-plaza-obat1udrzv57ptzz.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero_contenido {
+    max-width: 800px;
+}
+
+.hero_etiqueta {
+    display: inline-block;
+    margin: 0 0 15px 0;
+    padding: 6px 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.hero_texto {
+    color: #e8edff;
+    font-size: 1.15rem;
+    margin: 15px 0 30px 0;
+}
+
+.hero_botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.boton_principal,
+.boton_secundario {
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.boton_principal {
+    background-color: white;
+    color: #2c53e0;
+}
+
+.boton_secundario {
+    background-color: transparent;
+    color: white;
+}
+
+.boton_principal:hover,
+.boton_secundario:hover {
+    transform: translateY(-3px);
+}
+
+.boton_secundario:hover {
+    background-color: white;
+    color: #2c53e0;
+}
+
+/* ---------- DATOS CLAVE ---------- */
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: #2c53e0;
+}
+
+.dato {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+}
+
+.dato p {
+    margin: 0;
+    color: white;
+}
+
+.dato_numero {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.dato_texto {
+    color: #d6deff;
+}
+
+/* ---------- PRESENTACIÓN (qué es / propósito) ---------- */
+.presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.presentacion article {
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+    background-color: white;
+    border-left: 6px solid #2c53e0;
+    border-radius: 10px;
+}
+
+/* ---------- ACCESOS A SECCIONES ---------- */
+.secciones {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.secciones_tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta_seccion {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #2c53e0;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: left;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.tarjeta_seccion h3 {
+    color: #2c53e0;
+}
+
+.tarjeta_seccion p {
+    margin: 0;
+}
+
+.tarjeta_seccion:hover {
+    background-color: #2c53e0;
+    transform: translateY(-4px);
+}
+
+.tarjeta_seccion:hover h3,
+.tarjeta_seccion:hover p {
+    color: white;
+}
+
+/* ---------- VIDEO ---------- */
+.video_intro {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.video_intro figure {
+    margin: 20px 0 0 0;
+}
+
+.video_intro iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 10px;
+}
+
+.video_intro figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ---------- FOOTER (igual que antes) ---------- */
+footer {
+    background-color: #2c53e0;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer div.lad_izq {
+    border-right: 2px solid white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 31px;
+}
+
+footer div.lad_izq p {
+    margin: 0;
+    padding: 0 15px;
+    color: white;
+}
+
+footer div.lad_der {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer div.lad_der > div {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+footer div.lad_der div p {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav div {
+        flex: 1 1 33%;
+        height: 55px;
+    }
+
+    .nav_logo {
+        flex: 1 1 100%;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer div.lad_izq {
+        border-right: none;
+        border-bottom: 2px solid white;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}
