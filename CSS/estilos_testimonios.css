@@ -29,7 +29,7 @@ body, p, a, li, button, input, label, span {
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("https://static.vecteezy.com/system/resources/previews/015/392/263/non_2x/abstract-background-design-pattern-textile-and-fabric-pattern-abstract-element-pattern-free-vector.jpg");
+    background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("../Images/patron-testimonios.jpg");
     background-position: center 10%;
     display: flex;
     flex-direction: column;
@@ -350,8 +350,8 @@ footer div a {
 }
 
 footer div a img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 /* ---------- RESPONSIVE ---------- */

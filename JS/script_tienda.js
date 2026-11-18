@@ -1,15 +1,15 @@
 /* ==========================================================================
-   script_tienda.js - Página de Tienda
-   1) Dibuja las tarjetas de productos a partir de la lista `productos`.
-   2) Al tocar "Comprar" abre una caja (modal) con más detalles del producto.
-   3) En esa caja, "Confirmar" agrega el producto al carrito y "Cancelar" vuelve.
-   4) El carrito se guarda en localStorage (no se pierde al recargar la página).
-   5) El ícono del carrito abre un panel con los productos, su precio, un botón
-      "Eliminar" en cada uno y un "Confirmar" para comprar todo (genera el ID).
-   6) Arriba de los productos hay filtros por categoría y por rango de precio,
-      y un selector para ordenarlos de menor a mayor o de mayor a menor.
-   PARA AGREGAR UN PRODUCTO NUEVO: sumá un objeto más a la lista `productos`
-   (con coma entre objetos). No hace falta tocar el HTML ni el CSS.
+    script_tienda.js - Página de Tienda
+    1) Dibuja las tarjetas de productos a partir de la lista `productos`.
+    2) Al tocar "Comprar" abre una caja (modal) con más detalles del producto.
+    3) En esa caja, "Confirmar" agrega el producto al carrito y "Cancelar" vuelve.
+    4) El carrito se guarda en localStorage (no se pierde al recargar la página).
+    5) El ícono del carrito abre un panel con los productos, su precio, un botón
+    "Eliminar" en cada uno y un "Confirmar" para comprar todo (genera el ID).
+    6) Arriba de los productos hay filtros por categoría y por rango de precio,
+    y un selector para ordenarlos de menor a mayor o de mayor a menor.
+    PARA AGREGAR UN PRODUCTO NUEVO: sumá un objeto más a la lista `productos`
+    (con coma entre objetos). No hace falta tocar el HTML ni el CSS.
    ========================================================================== */
 
 /* ---------- 1. DATOS ---------- */
@@ -22,7 +22,7 @@ const productos = [
         nombre: "Mochila Roja - Marca ROBLOX",
         categoria: "Mochilas",
         precio: 45.99,
-        imagen: "https://tse4.mm.bing.net/th/id/OIP.rcSLxlZwXMU7-ID90I8V8gHaHa?r=0&w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3",
+        imagen: "../Images/mochila-roja_roblox.webp",
         alt: "Mochila roja de la marca Roblox",
         descripcion: "Mochila de color rojo de la marca ROBLOX."
     },
@@ -31,7 +31,7 @@ const productos = [
         nombre: "Mochila - Marca ROBLOX",
         categoria: "Mochilas",
         precio: 60.99,
-        imagen: "https://images.immediate.co.uk/production/volatile/sites/3/2022/03/roblox-backpack-ff80bfb.jpg?quality=90&fit=620,413",
+        imagen: "../Images/roblox-backpack.jpg",
         alt: "Mochila de la marca Roblox",
         descripcion: "Mochila de la marca ROBLOX."
     },
@@ -40,7 +40,7 @@ const productos = [
         nombre: "Mochila para chicos - Marca ROBLOX",
         categoria: "Mochilas",
         precio: 65.99,
-        imagen: "https://media.karousell.com/media/photos/products/2023/12/21/roblox_children_kids_school_ba_1703130277_a58f967f_progressive",
+        imagen: "../Images/roblox_children_kids.jfif",
         alt: "Mochila para niños de la marca Roblox, con cartuchera",
         descripcion: "Mochila para chicos de la marca ROBLOX. Incluye una cartuchera."
     },
@@ -49,7 +49,7 @@ const productos = [
         nombre: "Mochila + Bolsa de Mano - ROBLOX",
         categoria: "Mochilas",
         precio: 95.90,
-        imagen: "https://i5.walmartimages.com/seo/Roblox-Backpack-Gamer-Black-Rucksack-Green-Creeper-Zombie-Skeleton-Enderman-Cave-Spider_286688c2-d9f0-42f4-b17b-901f6c3293e6.e1a45c62a4d61106eee2fa4a4c5ed657.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+        imagen: "../Images/mochila_bolsa-mano.avif",
         alt: "Mochila de Roblox junto con una bolsa de mano",
         descripcion: "Mochila de la marca ROBLOX que viene con una bolsa de mano."
     },
@@ -58,7 +58,7 @@ const productos = [
         nombre: "Tarjeta de Regalo (4500 ROBUX)",
         categoria: "Tarjetas de regalo",
         precio: 50,
-        imagen: "https://storegames.com.pe/wp-content/uploads/2024/01/roblox000-3-ph.webp",
+        imagen: "../Images/tarjeta-4500.webp",
         alt: "Tarjeta de regalo de Roblox de 4500 Robux",
         descripcion: "Tarjeta de regalo con 4500 Robux."
     },
@@ -67,7 +67,7 @@ const productos = [
         nombre: "Tarjeta de Regalo (1300 ROBUX)",
         categoria: "Tarjetas de regalo",
         precio: 10,
-        imagen: "https://tse4.mm.bing.net/th/id/OIP.alAGrMin5xIT2u3IN3bqfgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        imagen: "../Images/tarjeta-1300.webp",
         alt: "Tarjeta de regalo de Roblox de 1300 Robux",
         descripcion: "Tarjeta de regalo con 1300 Robux."
     },
@@ -76,7 +76,7 @@ const productos = [
         nombre: "Tarjeta de Regalo (2700 ROBUX)",
         categoria: "Tarjetas de regalo",
         precio: 20,
-        imagen: "https://http2.mlstatic.com/D_NQ_NP_830249-MLU92127197963_092025-O.webp",
+        imagen: "../Images/tarjeta-2700.webp",
         alt: "Tarjeta de regalo de Roblox de 2700 Robux",
         descripcion: "Tarjeta de regalo con 2700 Robux."
     },
@@ -85,7 +85,7 @@ const productos = [
         nombre: "Tarjeta de Regalo (9000 ROBUX)",
         categoria: "Tarjetas de regalo",
         precio: 100,
-        imagen: "https://cdn.kemik.gt/2023/09/ROBLOX100USD-ROBLOX-1200x1200-01.jpg",
+        imagen: "../Images/tarjeta-9000.jpg",
         alt: "Tarjeta de regalo de Roblox de 9000 Robux",
         descripcion: "Tarjeta de regalo con 9000 Robux."
     },
@@ -94,7 +94,7 @@ const productos = [
         nombre: "Tarjeta de Regalo (7500 ROBUX)",
         categoria: "Tarjetas de regalo",
         precio: 80,
-        imagen: "https://http2.mlstatic.com/D_NQ_NP_695221-MLA79447789004_102024-O.webp",
+        imagen: "../Images/tarjeta-7500.webp",
         alt: "Tarjeta de regalo de Roblox de 7500 Robux",
         descripcion: "Tarjeta de regalo con 7500 Robux."
     },
@@ -103,7 +103,7 @@ const productos = [
         nombre: "Set de 32 personajes de ROBLOX para armar",
         categoria: "Juguetes",
         precio: 400,
-        imagen: "https://tse1.mm.bing.net/th/id/OIP.500RRMXbfi91EDxLzfNngwHaEj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        imagen: "../Images/set-32-personajes.webp",
         alt: "Set de 32 personajes de Roblox para armar",
         descripcion: "Set de 32 personajes de ROBLOX para armar."
     },
@@ -112,7 +112,7 @@ const productos = [
         nombre: "Set de 6 personajes de ROBLOX para armar",
         categoria: "Juguetes",
         precio: 150,
-        imagen: "https://i.pinimg.com/originals/ec/c3/25/ecc325326c49c98d1a326cf0c522d56c.jpg",
+        imagen: "../Images/set-6-personajes.jpg",
         alt: "Set de 6 personajes de Roblox para armar",
         descripcion: "Set de 6 personajes de ROBLOX para armar."
     },
@@ -121,7 +121,7 @@ const productos = [
         nombre: "Teclado - Marca ROBLOX",
         categoria: "Accesorios",
         precio: 550,
-        imagen: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3caa01c5-c7e0-4680-bfee-876437762f75.__CR0,0,970,600_PT0_SX970_V1___.png",
+        imagen: "../Images/teclado-roblox-ryzer.jfif",
         alt: "Teclado de la marca Roblox",
         descripcion: "Teclado de la marca ROBLOX."
     }

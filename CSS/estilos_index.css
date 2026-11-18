@@ -102,7 +102,7 @@ main {
     padding: 40px 20px;
     text-align: center;
     background-image: linear-gradient(rgba(10, 20, 60, 0.65), rgba(10, 20, 60, 0.85)),
-                      url("https://wallpapers.com/images/hd/roblox-in-the-plaza-obat1udrzv57ptzz.jpg");
+                      url("../Images/roblox-in-the-plaza.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -340,8 +340,8 @@ footer div a {
 }
 
 footer div a img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 /* ---------- RESPONSIVE ---------- */

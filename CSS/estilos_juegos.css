@@ -20,7 +20,7 @@ body, p, a, li, button, input, label, span {
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("https://image.api.playstation.com/vulcan/ap/rnd/202504/1706/4cc02203db88b29b535c26b8296c89f983eaf48d67462e1d.png");
+    background-image: linear-gradient(rgba(225, 240, 253, 0.87), rgba(225, 240, 253, 0.87)), url("../Images/patron-juegos.avif");
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -273,8 +273,8 @@ footer div a {
 }
 
 footer div a img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 /* ---------- RESPONSIVE ---------- */
