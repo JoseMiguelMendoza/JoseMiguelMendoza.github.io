@@ -24,9 +24,9 @@ body, p, a, li, button, input, textarea, label, legend, span {
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("https://wallpapers.com/images/hd/cool-roblox-scenery-tkl62qo7ujdu2ldc.jpg");
-    background-position: center 10%;
-    background-size: cover;
+    background-image: linear-gradient(rgba(252, 252, 252, 0.87), rgba(252, 252, 252, 0.87)), url("../Images/patron-contacto.jpg");
+    background-position: center 30%;
+    background-size: contain;
     display: flex;
     flex-direction: column;
 }

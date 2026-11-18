@@ -16,7 +16,7 @@ Sitio web multipágina (HTML, CSS y JavaScript, sin librerías) que recorre la h
 
 Opcional: con Visual Studio Code y la extensión *Live Server*, clic derecho sobre `index.html` → *Open with Live Server*.
 
-> **Requiere internet** para mostrar las fuentes (Google Fonts), el favicon, el fondo y varias imágenes de juegos, que se cargan desde sitios externos (ver "Recursos externos").
+> **Requiere internet** para mostrar las fuentes (Google Fonts)
 
 ## Estructura de carpetas
 
@@ -42,7 +42,7 @@ Opcional: con Visual Studio Code y la extensión *Live Server*, clic derecho sob
 │   ├── script_testimonios.js
 │   ├── script_tienda.js
 │   └── script_contacto.js
-└── Images/                     ← imágenes propias (ver lista más abajo)
+└── Images/                     ← imágenes propias
 ```
 
 Las páginas dentro de `HTML/` enlazan sus recursos con rutas como `../CSS/...`, `../JS/...` y `../Images/...`. `index.html` usa `./CSS/...`, `./HTML/...`, etc.
@@ -102,14 +102,6 @@ Recomendaciones para agregar una imagen nueva:
 - Peso de menos de 200 KB (si pesa más, se puede comprimir o convertir a WebP).
 - Texto alternativo (`alt`) que describa la imagen, sin usar palabras genéricas como "imagen" o "foto".
 - Desde `index.html` se enlaza como `./Images/nombre.png` y desde las páginas dentro de `HTML/` como `../Images/nombre.png`.
-
-## Recursos externos
-
-El sitio carga desde internet:
-
-- Fuentes de Google Fonts.
-
-Si alguno de esos sitios cambia o borra un archivo, la imagen deja de verse. La mejora prevista es descargarlas, optimizarlas (menos de 200 KB) y guardarlas en `Images/`.
 
 ## Créditos y derechos
 
