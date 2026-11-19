@@ -213,7 +213,8 @@ main {
 
 .presentacion article {
     flex: 1;
-    min-width: 300px;
+    box-sizing: border-box;
+    min-width: min(300px, 100%);
     padding: 25px;
     background-color: white;
     border-left: 6px solid #2c53e0;
