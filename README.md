@@ -16,7 +16,7 @@ Sitio web multipágina (HTML, CSS y JavaScript, sin librerías) que recorre la h
 
 Opcional: con Visual Studio Code y la extensión *Live Server*, clic derecho sobre `index.html` → *Open with Live Server*.
 
-> **Requiere internet** para mostrar las fuentes (Google Fonts)
+> **Requiere internet** para mostrar las fuentes (Google Fonts) y los videos de youtube para las secciones de Inicio y Evolución.
 
 ## Estructura de carpetas
 
